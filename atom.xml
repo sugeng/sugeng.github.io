@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Catatan Programmer Idiot]]></title>
+  <link href="http://sugeng.github.io/atom.xml" rel="self"/>
+  <link href="http://sugeng.github.io/"/>
+  <updated>2013-11-23T22:20:43+07:00</updated>
+  <id>http://sugeng.github.io/</id>
+  <author>
+    <name><![CDATA[Sugeng. S]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
