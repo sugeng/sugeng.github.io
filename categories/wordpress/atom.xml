@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Catatan Programmer Idiot]]></title>
-  <link href="http://sugeng.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Wordpress | Catatan Programmer Idiot]]></title>
+  <link href="http://sugeng.github.io/categories/wordpress/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
   <updated>2013-11-25T15:18:43+07:00</updated>
   <id>http://sugeng.github.io/</id>
@@ -12,56 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Fix Octopress Repository Setelah Git Clone]]></title>
-    <link href="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/"/>
-    <updated>2013-11-25T08:57:11+07:00</updated>
-    <id>http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone</id>
-    <content type="html"><![CDATA[<p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>To https://github.com/username/username.github.io
- ! [rejected]        master -&gt; master (non-fast-forward)
- error: failed to push some refs to 'https://github.com/username/username.github.io'
- hint: Updates were rejected because the tip of your current branch is behind
- hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
- hint: before pushing again.
- hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-## Github Pages deploy complete
-cd -
-</pre></div>
-</div>
-</div>
-
-<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>    git clone https://github.com/username/username.github.io.git
-    git checkout source
-    mkdir _deploy
-    cd _deploy
-    git init
-    git remote add -t master -f origin https://github.com/username/username.github.io.git
-</pre></div>
-</div>
-</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Gitolite Pada Ubuntu 11.04]]></title>
-    <link href="http://sugeng.github.io/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/"/>
-    <updated>2013-11-23T13:12:40+07:00</updated>
-    <id>http://sugeng.github.io/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04</id>
-    <content type="html"><![CDATA[<h2 id="pengantar">Pengantar</h2>
-
-<p><a href="http://git-scm.com/" title="Git Homepage">Git</a> merupakan aplikasi version control yang sekarang telah banyak digunakan untuk mendokumentasikan perubahan pada kode untuk setiap project. Tentu saja selain menggunakan <a href="http://github.com/" title="Github">Github</a> kita bisa menginstall sendiri sebuah git server yang bisa digunakan sebagai private server dijaringan lokal.</p>
-
-<p><strong>Gitolite</strong> menyediakan akses kontrol untuk git server,</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Blogging Menggunakan Octopress &amp; Heroku]]></title>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Catatan Programmer Idiot]]></title>
-  <link href="http://sugeng.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Octopress | Catatan Programmer Idiot]]></title>
+  <link href="http://sugeng.github.io/categories/octopress/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
   <updated>2013-11-25T15:18:43+07:00</updated>
   <id>http://sugeng.github.io/</id>
@@ -47,19 +47,6 @@ cd -
 </pre></div>
 </div>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Install Gitolite Pada Ubuntu 11.04]]></title>
-    <link href="http://sugeng.github.io/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/"/>
-    <updated>2013-11-23T13:12:40+07:00</updated>
-    <id>http://sugeng.github.io/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04</id>
-    <content type="html"><![CDATA[<h2 id="pengantar">Pengantar</h2>
-
-<p><a href="http://git-scm.com/" title="Git Homepage">Git</a> merupakan aplikasi version control yang sekarang telah banyak digunakan untuk mendokumentasikan perubahan pada kode untuk setiap project. Tentu saja selain menggunakan <a href="http://github.com/" title="Github">Github</a> kita bisa menginstall sendiri sebuah git server yang bisa digunakan sebagai private server dijaringan lokal.</p>
-
-<p><strong>Gitolite</strong> menyediakan akses kontrol untuk git server,</p>
 ]]></content>
   </entry>
   

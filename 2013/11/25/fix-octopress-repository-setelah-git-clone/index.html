@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blogging Menggunakan Octopress &amp; Heroku - Catatan Programmer Idiot</title>
+  <title>Fix Octopress Repository Setelah Git Clone - Catatan Programmer Idiot</title>
   <meta name="author" content="Sugeng. S">
 
-  
-  <meta name="description" content="Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya &hellip;">
-  
+ 
+ <meta name="description" content="Log macam-macam snippet dan experimen" />
+
+ 
+ <meta name="keywords" content="sugeng, log, octopress, indonesia, programming" />
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sugeng.github.io/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku">
+  <link rel="canonical" href="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Catatan Programmer Idiot" type="application/atom+xml">
@@ -57,8 +59,8 @@
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/archives">Archives</a></li>
 </ul>
 
 </nav>
@@ -69,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Blogging Menggunakan Octopress &amp; Heroku</h1>
+      <h1 class="entry-title">Fix Octopress Repository Setelah Git Clone</h1>
     
     
       <p class="meta">
@@ -85,47 +87,42 @@
   
 
 
-<time datetime="2013-11-22T09:49:24+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-25T08:57:11+07:00" pubdate data-updated="true">Nov 25<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
+<div class="entry-content"><p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
 
-<h3 id="plugin-wordpress-terlalu-banyak">Plugin Wordpress terlalu banyak</h3>
-<p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
+<div><div class="CodeRay">
+  <div class="code"><pre>To https://github.com/username/username.github.io
+ ! [rejected]        master -&gt; master (non-fast-forward)
+ error: failed to push some refs to 'https://github.com/username/username.github.io'
+ hint: Updates were rejected because the tip of your current branch is behind
+ hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+ hint: before pushing again.
+ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-<h3 id="cepat-dan-efisien">Cepat dan Efisien</h3>
-<p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
+## Github Pages deploy complete
+cd -
+</pre></div>
+</div>
+</div>
 
-<h3 id="hosting-di-github-pages">Hosting di Github Pages</h3>
-<p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
+<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
 
-<h3 id="mudah-digunakan">Mudah digunakan</h3>
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
-
-<pre><code>rake new_post['Judul Posting']
-rake generate
-rake deploy
-</code></pre>
-
-<h3 id="markdown">Markdown</h3>
-<p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
-
-<h3 id="tidak-menggunakan-databasestatic-pages">Tidak menggunakan database/Static pages</h3>
-<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file ==_config== kemudian halaman blog digenerate oleh ==jekyll==
-.</p>
-
-<h3 id="security-yang-lebih-baik">Security yang lebih baik</h3>
-<p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
-
-<h3 id="tersedia-plugin">Tersedia Plugin</h3>
-<p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
-
-<p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
-
+<div><div class="CodeRay">
+  <div class="code"><pre>    git clone https://github.com/username/username.github.io.git
+    git checkout source
+    mkdir _deploy
+    cd _deploy
+    git init
+    git remote add -t master -f origin https://github.com/username/username.github.io.git
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -148,15 +145,21 @@ rake deploy
   
 
 
-<time datetime="2013-11-22T09:49:24+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-25T08:57:11+07:00" pubdate data-updated="true">Nov 25<span>th</span>, 2013</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/categories/github/'>Github</a>, <a class='category' href='/categories/octopress/'>Octopress</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/" >Tweet</a>
   
   
   
@@ -165,8 +168,8 @@ rake deploy
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/" title="Previous Post: Install Gitolite Pada Ubuntu 11.04">&laquo; Install Gitolite Pada Ubuntu 11.04</a>
       
-        <a class="basic-alignment right" href="/blog/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/" title="Next Post: Install Gitolite Pada Ubuntu 11.04">Install Gitolite Pada Ubuntu 11.04 &raquo;</a>
       
     </p>
   </footer>
@@ -181,20 +184,23 @@ rake deploy
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/25/fix-octopress-repository-setelah-git-clone/">Fix Octopress Repository Setelah Git Clone</a>
+        <a href="/2013/11/25/fix-octopress-repository-setelah-git-clone/">Fix Octopress Repository Setelah Git Clone</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/">Install Gitolite Pada Ubuntu 11.04</a>
+        <a href="/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/">Install Gitolite Pada Ubuntu 11.04</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku/">Blogging Menggunakan Octopress &amp; Heroku</a>
+        <a href="/2013/11/22/blogging-menggunakan-octopress-and-heroku/">Blogging Menggunakan Octopress &amp; Heroku</a>
       </li>
     
   </ul>
 </section>
-
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/categories/github'>Github (1)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/ubuntu'>Ubuntu (1)</a></li><li><a href='/categories/wordpress'>Wordpress (1)</a></li></ul>
+</section>
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
