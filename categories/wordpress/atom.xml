@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Wordpress | Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/categories/wordpress/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2013-11-25T15:18:43+07:00</updated>
+  <updated>2013-11-25T18:18:40+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -20,38 +20,46 @@
     <id>http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku</id>
     <content type="html"><![CDATA[<p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
-<h3 id="plugin-wordpress-terlalu-banyak">Plugin Wordpress terlalu banyak</h3>
+<h3 id="toc_8">Plugin Wordpress terlalu banyak</h3>
+
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
 
-<h3 id="cepat-dan-efisien">Cepat dan Efisien</h3>
+<h3 id="toc_9">Cepat dan Efisien</h3>
+
 <p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
 
-<h3 id="hosting-di-github-pages">Hosting di Github Pages</h3>
+<h3 id="toc_10">Hosting di Github Pages</h3>
+
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
-<h3 id="mudah-digunakan">Mudah digunakan</h3>
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+<h3 id="toc_11">Mudah digunakan</h3>
 
-<pre><code>rake new_post['Judul Posting']
+<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+<div class="CodeRay">
+  <div class="code"><pre>rake new_post['Judul Posting']
 rake generate
 rake deploy
-</code></pre>
+</pre></div>
+</div>
 
-<h3 id="markdown">Markdown</h3>
+<h3 id="toc_12">Markdown</h3>
+
 <p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
 
-<h3 id="tidak-menggunakan-databasestatic-pages">Tidak menggunakan database/Static pages</h3>
-<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file ==_config== kemudian halaman blog digenerate oleh ==jekyll==
+<h3 id="toc_13">Tidak menggunakan database/Static pages</h3>
+
+<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark><br>
 .</p>
 
-<h3 id="security-yang-lebih-baik">Security yang lebih baik</h3>
+<h3 id="toc_14">Security yang lebih baik</h3>
+
 <p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
 
-<h3 id="tersedia-plugin">Tersedia Plugin</h3>
+<h3 id="toc_15">Tersedia Plugin</h3>
+
 <p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
 
 <p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
-
 ]]></content>
   </entry>
   

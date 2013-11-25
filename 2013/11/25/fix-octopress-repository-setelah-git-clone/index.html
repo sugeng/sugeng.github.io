@@ -95,33 +95,29 @@
 
 
 <div class="entry-content"><p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>To https://github.com/username/username.github.io
+<div class="CodeRay">
+  <div class="code"><pre><span class="constant">To</span> <span class="key">https</span>:<span class="regexp"><span class="delimiter">/</span><span class="delimiter">/</span></span>github.com/username/username.github.io
  ! [rejected]        master -&gt; master (non-fast-forward)
- error: failed to push some refs to 'https://github.com/username/username.github.io'
- hint: Updates were rejected because the tip of your current branch is behind
- hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
- hint: before pushing again.
- hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ <span class="key">error</span>: failed to push some refs to <span class="string"><span class="delimiter">'</span><span class="content">https://github.com/username/username.github.io</span><span class="delimiter">'</span></span>
+ <span class="key">hint</span>: <span class="constant">Updates</span> were rejected because the tip of your current branch is behind
+ <span class="key">hint</span>: its remote counterpart. Merge the remote changes (e.g. <span class="string"><span class="delimiter">'</span><span class="content">git pull</span><span class="delimiter">'</span></span>)
+ <span class="key">hint</span>: before pushing again.
+ hint: <span class="constant">See</span> the <span class="string"><span class="delimiter">'</span><span class="content">Note about fast-forwards</span><span class="delimiter">'</span></span> <span class="keyword">in</span> <span class="string"><span class="delimiter">'</span><span class="content">git push --help</span><span class="delimiter">'</span></span> <span class="keyword">for</span> details.
 
-## Github Pages deploy complete
+<span class="comment">## Github Pages deploy complete</span>
 cd -
 </pre></div>
 </div>
-</div>
 
 <p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>    git clone https://github.com/username/username.github.io.git
-    git checkout source
-    mkdir _deploy
-    cd _deploy
-    git init
-    git remote add -t master -f origin https://github.com/username/username.github.io.git
+<div class="CodeRay">
+  <div class="code"><pre>git <span class="keyword">clone</span> https:<span class="comment">//github.com/username/username.github.io.git</span>
+git checkout source
+<span class="predefined">mkdir</span> _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https:<span class="comment">//github.com/username/username.github.io.git</span>
 </pre></div>
-</div>
 </div>
 </div>
 

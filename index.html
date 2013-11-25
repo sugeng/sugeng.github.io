@@ -98,33 +98,29 @@
 
 
   <div class="entry-content"><p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>To https://github.com/username/username.github.io
+<div class="CodeRay">
+  <div class="code"><pre><span class="constant">To</span> <span class="key">https</span>:<span class="regexp"><span class="delimiter">/</span><span class="delimiter">/</span></span>github.com/username/username.github.io
  ! [rejected]        master -&gt; master (non-fast-forward)
- error: failed to push some refs to 'https://github.com/username/username.github.io'
- hint: Updates were rejected because the tip of your current branch is behind
- hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
- hint: before pushing again.
- hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ <span class="key">error</span>: failed to push some refs to <span class="string"><span class="delimiter">'</span><span class="content">https://github.com/username/username.github.io</span><span class="delimiter">'</span></span>
+ <span class="key">hint</span>: <span class="constant">Updates</span> were rejected because the tip of your current branch is behind
+ <span class="key">hint</span>: its remote counterpart. Merge the remote changes (e.g. <span class="string"><span class="delimiter">'</span><span class="content">git pull</span><span class="delimiter">'</span></span>)
+ <span class="key">hint</span>: before pushing again.
+ hint: <span class="constant">See</span> the <span class="string"><span class="delimiter">'</span><span class="content">Note about fast-forwards</span><span class="delimiter">'</span></span> <span class="keyword">in</span> <span class="string"><span class="delimiter">'</span><span class="content">git push --help</span><span class="delimiter">'</span></span> <span class="keyword">for</span> details.
 
-## Github Pages deploy complete
+<span class="comment">## Github Pages deploy complete</span>
 cd -
 </pre></div>
 </div>
-</div>
 
 <p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>    git clone https://github.com/username/username.github.io.git
-    git checkout source
-    mkdir _deploy
-    cd _deploy
-    git init
-    git remote add -t master -f origin https://github.com/username/username.github.io.git
+<div class="CodeRay">
+  <div class="code"><pre>git <span class="keyword">clone</span> https:<span class="comment">//github.com/username/username.github.io.git</span>
+git checkout source
+<span class="predefined">mkdir</span> _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https:<span class="comment">//github.com/username/username.github.io.git</span>
 </pre></div>
-</div>
 </div>
 </div>
   
@@ -161,7 +157,7 @@ cd -
   </header>
 
 
-  <div class="entry-content"><h2 id="pengantar">Pengantar</h2>
+  <div class="entry-content"><h2 id="toc_25">Pengantar</h2>
 
 <p><a href="http://git-scm.com/" title="Git Homepage">Git</a> merupakan aplikasi version control yang sekarang telah banyak digunakan untuk mendokumentasikan perubahan pada kode untuk setiap project. Tentu saja selain menggunakan <a href="http://github.com/" title="Github">Github</a> kita bisa menginstall sendiri sebuah git server yang bisa digunakan sebagai private server dijaringan lokal.</p>
 
@@ -203,38 +199,46 @@ cd -
 
   <div class="entry-content"><p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
-<h3 id="plugin-wordpress-terlalu-banyak">Plugin Wordpress terlalu banyak</h3>
+<h3 id="toc_17">Plugin Wordpress terlalu banyak</h3>
+
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
 
-<h3 id="cepat-dan-efisien">Cepat dan Efisien</h3>
+<h3 id="toc_18">Cepat dan Efisien</h3>
+
 <p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
 
-<h3 id="hosting-di-github-pages">Hosting di Github Pages</h3>
+<h3 id="toc_19">Hosting di Github Pages</h3>
+
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
-<h3 id="mudah-digunakan">Mudah digunakan</h3>
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+<h3 id="toc_20">Mudah digunakan</h3>
 
-<pre><code>rake new_post['Judul Posting']
+<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+<div class="CodeRay">
+  <div class="code"><pre>rake new_post['Judul Posting']
 rake generate
 rake deploy
-</code></pre>
+</pre></div>
+</div>
 
-<h3 id="markdown">Markdown</h3>
+<h3 id="toc_21">Markdown</h3>
+
 <p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
 
-<h3 id="tidak-menggunakan-databasestatic-pages">Tidak menggunakan database/Static pages</h3>
-<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file ==_config== kemudian halaman blog digenerate oleh ==jekyll==
+<h3 id="toc_22">Tidak menggunakan database/Static pages</h3>
+
+<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark><br>
 .</p>
 
-<h3 id="security-yang-lebih-baik">Security yang lebih baik</h3>
+<h3 id="toc_23">Security yang lebih baik</h3>
+
 <p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
 
-<h3 id="tersedia-plugin">Tersedia Plugin</h3>
+<h3 id="toc_24">Tersedia Plugin</h3>
+
 <p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
 
 <p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
-
 </div>
   
   
