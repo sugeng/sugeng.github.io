@@ -8,7 +8,7 @@ categories: Octopress Github
 
 Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan `git clone` dari repository di github ternyata saya tidak bisa melakukan push `rake deploy`
 
-~~~
+~~~ ruby
 To https://github.com/username/username.github.io
  ! [rejected]        master -> master (non-fast-forward)
  error: failed to push some refs to 'https://github.com/username/username.github.io'
@@ -20,16 +20,15 @@ To https://github.com/username/username.github.io
 ## Github Pages deploy complete
 cd -
 ~~~
-{:lang="text"}
     
 Cara memperbaikinya setelah saya baca di [sini](http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/) akhirnya saya bisa mengupdate blog post di github.
 
+~~~ php
+git clone https://github.com/username/username.github.io.git
+git checkout source
+mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https://github.com/username/username.github.io.git
 ~~~
-	git clone https://github.com/username/username.github.io.git
-	git checkout source
-    mkdir _deploy
-    cd _deploy
-    git init
-    git remote add -t master -f origin https://github.com/username/username.github.io.git
-~~~
-{:lang="text"}    
+

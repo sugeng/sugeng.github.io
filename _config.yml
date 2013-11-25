@@ -35,17 +35,21 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: categories
-markdown: kramdown
-kramdown:
-  use_coderay: true
-  coderay:
-    coderay_line_numbers: nil
-    coderay_css: class
+markdown: redcarpet2
+redcarpet:
+  extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript", "highlight"]
+
+#kramdown:
+#  use_coderay: true
+#  coderay:
+#    coderay_line_numbers: nil
+#    coderay_css: class
 #rdiscount:
 #  extensions:
 #    - autolink
 #    - footnotes
  #   - smart
+ #
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index

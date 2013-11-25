@@ -20,3 +20,4 @@ end
 gem 'sinatra', '~> 1.4.2'
 gem 'kramdown', '~> 0.13.8'
 gem 'coderay', '~> 1.0.9'
+gem 'redcarpet', '~> 3.0.0'
