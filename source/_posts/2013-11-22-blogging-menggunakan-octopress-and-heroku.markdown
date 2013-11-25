@@ -19,9 +19,24 @@ Web static octopress bisa dihosting-kan di [Github pages](https://help.github.co
 
 ### Mudah digunakan
 Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.
+
 	rake new_post['Judul Posting']
+    rake generate
 	rake deploy
 
 ### Markdown
-Sebagai editor, octopress menggunakan [Markdown](http://daringfireball.net/projects/markdown/).
+Sebagai editor, octopress menggunakan [Markdown](http://daringfireball.net/projects/markdown/). Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan [Haroopad](http://pad.haroopress.com/user.html#download).
+
+### Tidak menggunakan database/Static pages
+*apa? tidak menggunakan database??* Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file ==_config== kemudian halaman blog digenerate oleh ==jekyll==
+.
+
+### Security yang lebih baik
+Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.
+
+### Tersedia Plugin
+Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..
+
+Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.
+
 
