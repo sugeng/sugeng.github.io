@@ -4,7 +4,7 @@
   <title><![CDATA[Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2013-11-24T08:30:26+07:00</updated>
+  <updated>2013-11-25T08:20:06+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -31,9 +31,7 @@
     <link href="http://sugeng.github.io/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku/"/>
     <updated>2013-11-22T09:49:24+07:00</updated>
     <id>http://sugeng.github.io/blog/2013/11/22/blogging-menggunakan-octopress-and-heroku</id>
-    <content type="html"><![CDATA[<hr />
-
-<p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
+    <content type="html"><![CDATA[<p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
 <h3 id="plugin-wordpress-terlalu-banyak">Plugin Wordpress terlalu banyak</h3>
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
