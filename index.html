@@ -9,7 +9,7 @@
   <meta name="author" content="Sugeng. S">
 
   
-  <meta name="description" content="Pengantar Git merupakan aplikasi version control yang sekarang telah banyak digunakan untuk mendokumentasikan perubahan pada kode untuk setiap &hellip;">
+  <meta name="description" content="Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,65 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/25/fix-octopress-repository-setelah-git-clone/">Fix Octopress Repository Setelah Git Clone</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-25T08:57:11+07:00" pubdate data-updated="true">Nov 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
+
+<pre><code>To https://github.com/username/username.github.io
+ ! [rejected]        master -&gt; master (non-fast-forward)
+ error: failed to push some refs to 'https://github.com/username/username.github.io'
+ hint: Updates were rejected because the tip of your current branch is behind
+ hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+ hint: before pushing again.
+ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+## Github Pages deploy complete
+cd -
+</code></pre>
+
+<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
+
+<pre><code>git clone https://github.com/username/username.github.io.git
+git checkout source
+mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https://github.com/username/username.github.io.git
+</code></pre>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -172,6 +231,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/25/fix-octopress-repository-setelah-git-clone/">Fix Octopress Repository Setelah Git Clone</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/11/23/install-gitolite-pada-ubuntu-11-dot-04/">Install Gitolite Pada Ubuntu 11.04</a>

@@ -4,7 +4,7 @@
   <title><![CDATA[Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2013-11-25T08:36:10+07:00</updated>
+  <updated>2013-11-25T09:02:16+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Octopress Repository Setelah Git Clone]]></title>
+    <link href="http://sugeng.github.io/blog/2013/11/25/fix-octopress-repository-setelah-git-clone/"/>
+    <updated>2013-11-25T08:57:11+07:00</updated>
+    <id>http://sugeng.github.io/blog/2013/11/25/fix-octopress-repository-setelah-git-clone</id>
+    <content type="html"><![CDATA[<p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
+
+<pre><code>To https://github.com/username/username.github.io
+ ! [rejected]        master -&gt; master (non-fast-forward)
+ error: failed to push some refs to 'https://github.com/username/username.github.io'
+ hint: Updates were rejected because the tip of your current branch is behind
+ hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+ hint: before pushing again.
+ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+## Github Pages deploy complete
+cd -
+</code></pre>
+
+<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
+
+<pre><code>git clone https://github.com/username/username.github.io.git
+git checkout source
+mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https://github.com/username/username.github.io.git
+</code></pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install Gitolite Pada Ubuntu 11.04]]></title>
