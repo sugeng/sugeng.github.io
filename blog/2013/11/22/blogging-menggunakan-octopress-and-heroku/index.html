@@ -104,12 +104,27 @@
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
 <h3 id="mudah-digunakan">Mudah digunakan</h3>
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.
-	rake new_post[&lsquo;Judul Posting&rsquo;]
-	rake deploy</p>
+<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+
+<pre><code>rake new_post['Judul Posting']
+rake generate
+rake deploy
+</code></pre>
 
 <h3 id="markdown">Markdown</h3>
-<p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.</p>
+<p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
+
+<h3 id="tidak-menggunakan-databasestatic-pages">Tidak menggunakan database/Static pages</h3>
+<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file ==_config== kemudian halaman blog digenerate oleh ==jekyll==
+.</p>
+
+<h3 id="security-yang-lebih-baik">Security yang lebih baik</h3>
+<p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
+
+<h3 id="tersedia-plugin">Tersedia Plugin</h3>
+<p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
+
+<p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
 
 </div>
 
