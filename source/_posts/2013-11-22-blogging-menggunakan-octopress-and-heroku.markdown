@@ -3,7 +3,7 @@ layout: post
 title: "Blogging Menggunakan Octopress &amp; Heroku"
 date: 2013-11-22 09:49:24 +0700
 comments: true
-categories:
+categories: Octopress Wordpress
 ---
 
 Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :

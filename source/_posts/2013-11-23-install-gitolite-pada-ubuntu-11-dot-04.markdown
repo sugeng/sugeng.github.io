@@ -3,7 +3,7 @@ layout: post
 title: "Install Gitolite Pada Ubuntu 11.04"
 date: 2013-11-23 13:12:40 +0700
 comments: true
-categories:
+categories: Ubuntu
 ---
 
 ## Pengantar

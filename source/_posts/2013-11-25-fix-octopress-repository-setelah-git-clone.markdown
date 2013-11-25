@@ -3,7 +3,7 @@ layout: post
 title: "Fix Octopress Repository Setelah git clone"
 date: 2013-11-25 08:57:11 +0700
 comments: true
-categories: 
+categories: Octopress Github
 ---
 
 Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan `git clone` dari repository di github ternyata saya tidak bisa melakukan push `rake deploy`
