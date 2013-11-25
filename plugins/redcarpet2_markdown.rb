@@ -1,7 +1,6 @@
 require 'fileutils'
 require 'digest/md5'
 require 'redcarpet'
-require 'pygments'
 require 'coderay'
 
 class Redcarpet2Markdown < Redcarpet::Render::HTML
