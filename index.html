@@ -74,6 +74,93 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/">Kelola Snippet Menggunakan Gist &amp; Sublime Text</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T15:02:44+07:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ingatan saya termasuk kurang bagus karena selalu lupa dengan syntax-syntax yang biasa saya gunakan. Karena itu saya menyimpan potongan-potongan source (snippet) code yang saya anggap penting. Sebelum adanya <a href="http://github.com">Github</a> saya menyimpan snippet di text file. </p>
+
+<p>Sekarang menyimpan snippet bisa lebih mudah menggunakan fasilitas gist dari github. Selain di record juga perubahan pada snippet-snippet-nya kita juga bisa menshare snippet yang kita punya dengan orang lain.</p>
+
+<p>Karena sehari-hari untuk <em>coding</em> saya menggunakan Sublime Text, saya akhirnya menginstall plugin Gist di sublime text untuk memudahkan mengambil, meng-update juga meng-create snippet baru.</p>
+
+<h3 id="toc_34">Buat account github</h3>
+
+<p>Silakan registrasi account github. Service github tentunya gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).</p>
+
+<h3 id="toc_35">Buat API Github</h3>
+
+<p>Setelah membuat account github dan login buat token di <a href="https://github.com/settings/applications">https://github.com/settings/applications</a> pada bagian Personal Access Token. Tinggal masukkan deskripsi token lalu klik <mark>Create Token</mark>. </p>
+
+<h3 id="toc_36">Install Plugin Gist</h3>
+
+<p>Jika Anda juga menggunakan Sublime Text gunakan shortcut <code>ctrl+shit+p</code> untuk mengaktifkan window <em>palette</em> kemudian cari plugin <em>gist</em>. Setelah plugin selesai di install masuk ke <code>Preferences &gt; Package Settings &gt; Gists &gt; Settings - User</code>. Jika baru pertama kali menginstall plugin gist mungkin file setting ini masih kosong.</p>
+
+<p>Tambahkan script di bawah :</p>
+<div class="CodeRay">
+  <div class="code"><pre>{
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">token</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">TOKEN ANDA</span><span class="delimiter">&quot;</span></span>
+}
+</pre></div>
+</div>
+
+<p>Copy token yang tadi telah dibuat di gihub pada <mark>TOKEN ANDA</mark> lalu simpan.</p>
+
+<h3 id="toc_37">Menggunakan Plugin</h3>
+
+<p>Untuk menggunakan plugin gist, aktifkan <em>palette</em> (<code>ctrl+shit+p</code>) lalu ketik gist, maka muncul perintah git yang bisa digunakan.</p>
+
+<ul>
+<li>Gist: Insert Gist</li>
+<li>Gist: Open Gist</li>
+<li>Gist: Create Private Gist</li>
+<li>Gist: Create Public Gist</li>
+<li>Gist: Add File to Gist</li>
+</ul>
+
+<p>Selanjutnya jika ingin membuat gist baru, tinggal copykan snippet yang akan di simpan di sublime text lalu pilih <code>Gist: Create Private Gist</code> jika ingin snippet tidak di akses orang lain, namun pilih yang public jika sekaligus ingin men-share snippet tersebut.</p>
+
+<p>Jika ingin mengakses gist yang telah dibuat, pilih <code>Gist: Open Gist</code> maka akan muncul list file snippet yang telah dibuat. </p>
+
+<p>Bahan Bacaan :</p>
+
+<ul>
+<li><a href="http://www.sublimetext.com">Sublime Text</a></li>
+<li><a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html">Shortcut Sublime Text Windows</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-sublime-text-2-plugins-and-extensions/">Essential Sublime Text 2 Plugins and Extensions</a></li>
+<li><a href="http://aspirecode.com/create-and-open-github-gists-from-sublime-text/">Create and Open GitHub Gists from Sublime Text</a></li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2013/11/27/php-cetak-printer-dot-matrix/">PHP Cetak Printer DOT MATRIX (Bagian 1)</a></h1>
     
     
@@ -99,7 +186,7 @@
 
   <div class="entry-content"><p>Trik ini saya gunakan ketika saya membuat project program untuk sistem perguruan tinggi. Karena keperluan mencetak laporan dan daftar hadir yang masih dicetak menggunakan printer dot matrix.</p>
 
-<h3 id="toc_25">Menggunakan RAW text</h3>
+<h3 id="toc_33">Menggunakan RAW text</h3>
 
 <p>Cara ini saya dapatkan karena pernah menggunakan program EPSBED versi DOS dari DIKTI, pada dasarnya program tersebut (EPSBED) ketika melakukan proses cetak akan menciptakan file text sementara yang kemudian dicetak.</p>
 
@@ -573,19 +660,19 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
 
   <div class="entry-content"><p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
-<h3 id="toc_17">Plugin Wordpress terlalu banyak</h3>
+<h3 id="toc_25">Plugin Wordpress terlalu banyak</h3>
 
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
 
-<h3 id="toc_18">Cepat dan Efisien</h3>
+<h3 id="toc_26">Cepat dan Efisien</h3>
 
 <p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
 
-<h3 id="toc_19">Hosting di Github Pages</h3>
+<h3 id="toc_27">Hosting di Github Pages</h3>
 
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
-<h3 id="toc_20">Mudah digunakan</h3>
+<h3 id="toc_28">Mudah digunakan</h3>
 
 <p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
 <div class="CodeRay">
@@ -595,19 +682,19 @@ rake deploy
 </pre></div>
 </div>
 
-<h3 id="toc_21">Markdown</h3>
+<h3 id="toc_29">Markdown</h3>
 
 <p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
 
-<h3 id="toc_22">Tidak menggunakan database/Static pages</h3>
+<h3 id="toc_30">Tidak menggunakan database/Static pages</h3>
 
 <p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark>.</p>
 
-<h3 id="toc_23">Security yang lebih baik</h3>
+<h3 id="toc_31">Security yang lebih baik</h3>
 
 <p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
 
-<h3 id="toc_24">Tersedia Plugin</h3>
+<h3 id="toc_32">Tersedia Plugin</h3>
 
 <p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
 
@@ -632,6 +719,10 @@ rake deploy
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/">Kelola Snippet Menggunakan Gist &amp; Sublime Text</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/11/27/php-cetak-printer-dot-matrix/">PHP Cetak Printer DOT MATRIX (Bagian 1)</a>
       </li>
     
@@ -647,7 +738,7 @@ rake deploy
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/categories/github'>Github (1)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/php'>PHP (1)</a></li><li><a href='/categories/wordpress'>Wordpress (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/categories/github'>Github (2)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/php'>PHP (1)</a></li><li><a href='/categories/sublime-text'>Sublime-Text (1)</a></li><li><a href='/categories/wordpress'>Wordpress (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

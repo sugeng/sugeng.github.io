@@ -5,14 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blogging Menggunakan Octopress &amp; Heroku - Catatan Programmer Idiot</title>
+  <title>Kelola Snippet Menggunakan Gist &amp; Sublime Text - Catatan Programmer Idiot</title>
   <meta name="author" content="Sugeng. S">
 
  
- <meta name="description" content="Log macam-macam snippet dan experimen" />
+ <meta name="description" content="mengelola source code menggunakan gist dan sublime text" />
 
  
- <meta name="keywords" content="sugeng, log, octopress, indonesia, programming" />
+ <meta name="keywords" content="sublime text github gist" />
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku">
+  <link rel="canonical" href="http://sugeng.github.io/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Catatan Programmer Idiot" type="application/atom+xml">
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Blogging Menggunakan Octopress &amp; Heroku</h1>
+      <h1 class="entry-title">Kelola Snippet Menggunakan Gist &amp; Sublime Text</h1>
     
     
       <p class="meta">
@@ -87,54 +87,65 @@
   
 
 
-<time datetime="2013-11-22T09:49:24+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-27T15:02:44+07:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
+<div class="entry-content"><p>Ingatan saya termasuk kurang bagus karena selalu lupa dengan syntax-syntax yang biasa saya gunakan. Karena itu saya menyimpan potongan-potongan source (snippet) code yang saya anggap penting. Sebelum adanya <a href="http://github.com">Github</a> saya menyimpan snippet di text file. </p>
 
-<h3 id="toc_25">Plugin Wordpress terlalu banyak</h3>
+<p>Sekarang menyimpan snippet bisa lebih mudah menggunakan fasilitas gist dari github. Selain di record juga perubahan pada snippet-snippet-nya kita juga bisa menshare snippet yang kita punya dengan orang lain.</p>
 
-<p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
+<p>Karena sehari-hari untuk <em>coding</em> saya menggunakan Sublime Text, saya akhirnya menginstall plugin Gist di sublime text untuk memudahkan mengambil, meng-update juga meng-create snippet baru.</p>
 
-<h3 id="toc_26">Cepat dan Efisien</h3>
+<h3 id="toc_34">Buat account github</h3>
 
-<p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
+<p>Silakan registrasi account github. Service github tentunya gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).</p>
 
-<h3 id="toc_27">Hosting di Github Pages</h3>
+<h3 id="toc_35">Buat API Github</h3>
 
-<p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
+<p>Setelah membuat account github dan login buat token di <a href="https://github.com/settings/applications">https://github.com/settings/applications</a> pada bagian Personal Access Token. Tinggal masukkan deskripsi token lalu klik <mark>Create Token</mark>. </p>
 
-<h3 id="toc_28">Mudah digunakan</h3>
+<h3 id="toc_36">Install Plugin Gist</h3>
 
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
+<p>Jika Anda juga menggunakan Sublime Text gunakan shortcut <code>ctrl+shit+p</code> untuk mengaktifkan window <em>palette</em> kemudian cari plugin <em>gist</em>. Setelah plugin selesai di install masuk ke <code>Preferences &gt; Package Settings &gt; Gists &gt; Settings - User</code>. Jika baru pertama kali menginstall plugin gist mungkin file setting ini masih kosong.</p>
+
+<p>Tambahkan script di bawah :</p>
 <div class="CodeRay">
-  <div class="code"><pre>rake new_post['Judul Posting']
-rake generate
-rake deploy
+  <div class="code"><pre>{
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">token</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">TOKEN ANDA</span><span class="delimiter">&quot;</span></span>
+}
 </pre></div>
 </div>
 
-<h3 id="toc_29">Markdown</h3>
+<p>Copy token yang tadi telah dibuat di gihub pada <mark>TOKEN ANDA</mark> lalu simpan.</p>
 
-<p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
+<h3 id="toc_37">Menggunakan Plugin</h3>
 
-<h3 id="toc_30">Tidak menggunakan database/Static pages</h3>
+<p>Untuk menggunakan plugin gist, aktifkan <em>palette</em> (<code>ctrl+shit+p</code>) lalu ketik gist, maka muncul perintah git yang bisa digunakan.</p>
 
-<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark>.</p>
+<ul>
+<li>Gist: Insert Gist</li>
+<li>Gist: Open Gist</li>
+<li>Gist: Create Private Gist</li>
+<li>Gist: Create Public Gist</li>
+<li>Gist: Add File to Gist</li>
+</ul>
 
-<h3 id="toc_31">Security yang lebih baik</h3>
+<p>Selanjutnya jika ingin membuat gist baru, tinggal copykan snippet yang akan di simpan di sublime text lalu pilih <code>Gist: Create Private Gist</code> jika ingin snippet tidak di akses orang lain, namun pilih yang public jika sekaligus ingin men-share snippet tersebut.</p>
 
-<p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
+<p>Jika ingin mengakses gist yang telah dibuat, pilih <code>Gist: Open Gist</code> maka akan muncul list file snippet yang telah dibuat. </p>
 
-<h3 id="toc_32">Tersedia Plugin</h3>
+<p>Bahan Bacaan :</p>
 
-<p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
-
-<p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
+<ul>
+<li><a href="http://www.sublimetext.com">Sublime Text</a></li>
+<li><a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html">Shortcut Sublime Text Windows</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-sublime-text-2-plugins-and-extensions/">Essential Sublime Text 2 Plugins and Extensions</a></li>
+<li><a href="http://aspirecode.com/create-and-open-github-gists-from-sublime-text/">Create and Open GitHub Gists from Sublime Text</a></li>
+</ul>
 </div>
 
 
@@ -157,12 +168,12 @@ rake deploy
   
 
 
-<time datetime="2013-11-22T09:49:24+07:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
+<time datetime="2013-11-27T15:02:44+07:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/categories/octopress/'>Octopress</a>, <a class='category' href='/categories/wordpress/'>Wordpress</a>
+    <a class='category' href='/categories/github/'>Github</a>, <a class='category' href='/categories/sublime-text/'>Sublime-Text</a>
   
 </span>
 
@@ -171,7 +182,7 @@ rake deploy
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/" >Tweet</a>
   
   
   
@@ -180,8 +191,8 @@ rake deploy
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/2013/11/27/php-cetak-printer-dot-matrix/" title="Previous Post: PHP Cetak Printer DOT MATRIX (Bagian 1)">&laquo; PHP Cetak Printer DOT MATRIX (Bagian 1)</a>
       
-        <a class="basic-alignment right" href="/2013/11/25/fix-octopress-repository-setelah-git-clone/" title="Next Post: Fix Octopress Repository Setelah git clone">Fix Octopress Repository Setelah git clone &raquo;</a>
       
     </p>
   </footer>
@@ -286,8 +297,8 @@ rake deploy
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku/';
-        var disqus_url = 'http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku/';
+        var disqus_identifier = 'http://sugeng.github.io/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/';
+        var disqus_url = 'http://sugeng.github.io/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/';
         var disqus_script = 'embed.js';
       
     (function () {
