@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Catatan Programmer Idiot]]></title>
-  <link href="http://sugeng.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: PHP | Catatan Programmer Idiot]]></title>
+  <link href="http://sugeng.github.io/categories/php/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
   <updated>2013-11-27T14:55:35+07:00</updated>
   <id>http://sugeng.github.io/</id>
@@ -20,7 +20,7 @@
     <id>http://sugeng.github.io/2013/11/27/php-cetak-printer-dot-matrix</id>
     <content type="html"><![CDATA[<p>Trik ini saya gunakan ketika saya membuat project program untuk sistem perguruan tinggi. Karena keperluan mencetak laporan dan daftar hadir yang masih dicetak menggunakan printer dot matrix.</p>
 
-<h3 id="toc_25">Menggunakan RAW text</h3>
+<h3 id="toc_16">Menggunakan RAW text</h3>
 
 <p>Cara ini saya dapatkan karena pernah menggunakan program EPSBED versi DOS dari DIKTI, pada dasarnya program tersebut (EPSBED) ketika melakukan proses cetak akan menciptakan file text sementara yang kemudian dicetak.</p>
 
@@ -39,7 +39,7 @@ copy file_yang_akan_dicetak LPT1
 
 <p>Selanjutnya saya buat program PHP untuk menggenerate laporan dalam format text yang dapat didownload ke komputer klien. Berikut snippet source PHP-nya</p>
 
-<figure class='code'><figcaption><span> (laporan.ipk.php)</span> <a href='http://sugeng.github.io/downloads/code/laporan.ipk.php'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (laporan.ipk.php)</span> <a href='/downloads/code/laporan.ipk.php'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -181,7 +181,7 @@ copy file_yang_akan_dicetak LPT1
 </span><span class='line'>
 </span><span class='line'><span class="k">function</span> <span class="nf">contents</span><span class="p">()</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="s1">&#39;[{</span>
+</span><span class='line'>	<span class="k">return</span> <span class="s1">&#39;[{</span>
 </span><span class='line'><span class="s1">    &quot;kode_matakuliah&quot;: &quot;FIK101&quot;,</span>
 </span><span class='line'><span class="s1">    &quot;nama_matakuliah&quot;: &quot;PENDIDIKAN PANCASILA&quot;,</span>
 </span><span class='line'><span class="s1">    &quot;sks&quot;: &quot;2&quot;,</span>
@@ -248,77 +248,77 @@ copy file_yang_akan_dicetak LPT1
 </span><span class='line'>
 </span><span class='line'><span class="k">function</span> <span class="nf">contentHeader</span><span class="p">()</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="s1">&#39;{ &quot;nim&quot;:&quot;201241002&quot;, &quot;jurusan&quot;:&quot;ILMU KOMUNIKASI&quot;,&quot;nama&quot;:&quot;LUKE SKYWALKER&quot;,&quot;batas_studi&quot;:&quot;20182&quot;,&quot;dosen_pembimbing&quot;:&quot;YODA&quot;,&quot;nilai_ipk&quot;:&quot;0.00&quot;,&quot;sks_total&quot;:&quot;18&quot;}&#39;</span><span class="p">;</span>
+</span><span class='line'>	<span class="k">return</span> <span class="s1">&#39;{ &quot;nim&quot;:&quot;201241002&quot;, &quot;jurusan&quot;:&quot;ILMU KOMUNIKASI&quot;,&quot;nama&quot;:&quot;LUKE SKYWALKER&quot;,&quot;batas_studi&quot;:&quot;20182&quot;,&quot;dosen_pembimbing&quot;:&quot;YODA&quot;,&quot;nilai_ipk&quot;:&quot;0.00&quot;,&quot;sks_total&quot;:&quot;18&quot;}&#39;</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">function</span> <span class="nf">createFile</span><span class="p">()</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">// Variable..</span>
-</span><span class='line'>  <span class="nv">$json</span>   <span class="o">=</span> <span class="nx">contents</span><span class="p">();</span>
-</span><span class='line'>  <span class="nv">$header</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nx">contentHeader</span><span class="p">());</span>
-</span><span class='line'>  <span class="nv">$_lf</span>  <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
-</span><span class='line'>      <span class="nv">$line</span> <span class="o">=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="c1">// Variable..</span>
+</span><span class='line'>	<span class="nv">$json</span>   <span class="o">=</span> <span class="nx">contents</span><span class="p">();</span>
+</span><span class='line'>	<span class="nv">$header</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nx">contentHeader</span><span class="p">());</span>
+</span><span class='line'>	<span class="nv">$_lf</span>  <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'>  	<span class="nv">$line</span> <span class="o">=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>      <span class="c1">// HEADER LAPORAN</span>
-</span><span class='line'>  <span class="nv">$hdr</span>  <span class="o">=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;*** Rekapitulasi History Nilai ***&quot;</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_BOTH</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>  	<span class="c1">// HEADER LAPORAN</span>
+</span><span class='line'>	<span class="nv">$hdr</span>  <span class="o">=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;*** Rekapitulasi History Nilai ***&quot;</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_BOTH</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;NIM &amp; NAMA&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span><span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nim</span> <span class="o">.</span><span class="s1">&#39; &#39;</span><span class="o">.</span> <span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nama</span>           <span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;JURUSAN&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span>    <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">jurusan</span>                           <span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;BATAS STUDI&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span><span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">batas_studi</span>                       <span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;P.A.&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span>       <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">dosen_pembimbing</span>                  <span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;NIM &amp; NAMA&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span><span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nim</span> <span class="o">.</span><span class="s1">&#39; &#39;</span><span class="o">.</span> <span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nama</span> 			<span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;JURUSAN&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> 	<span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">jurusan</span> 							<span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;BATAS STUDI&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span><span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">batas_studi</span>  						<span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;P.A.&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> 		<span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">dosen_pembimbing</span>					<span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_RIGHT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">// TITLE</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NO. &#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;MATAKULIAH&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;SKS&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;SEMESTER&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NILAI&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;BOBOT&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NxK&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="c1">// TITLE</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NO. &#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;MATAKULIAH&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;SKS&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;SEMESTER&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NILAI&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;BOBOT&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="s1">&#39;NxK&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">.</span> <span class="nv">$_lf</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>      <span class="k">foreach</span><span class="p">(</span><span class="nb">json_decode</span><span class="p">(</span><span class="nv">$json</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nv">$n</span><span class="o">++</span><span class="p">;</span>
-</span><span class='line'>          <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$n</span><span class="o">.</span><span class="s1">&#39;.&#39;</span><span class="p">,</span>                 <span class="mi">6</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">kode_matakuliah</span><span class="p">,</span>  <span class="mi">8</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nama_matakuliah</span><span class="p">,</span>  <span class="mi">39</span><span class="p">)</span><span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">sks</span><span class="p">,</span>              <span class="mi">7</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">semester</span><span class="p">,</span>         <span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nilai</span><span class="p">,</span>            <span class="mi">4</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">bobot</span><span class="p">,</span>            <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nxk</span><span class="p">,</span>              <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>              <span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  	<span class="k">foreach</span><span class="p">(</span><span class="nb">json_decode</span><span class="p">(</span><span class="nv">$json</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  		<span class="nv">$n</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>  		<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$n</span><span class="o">.</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> 				<span class="mi">6</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>	      		<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">kode_matakuliah</span><span class="p">,</span> 	<span class="mi">8</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>	      		<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nama_matakuliah</span><span class="p">,</span> 	<span class="mi">39</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'>	      		<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">sks</span><span class="p">,</span> 				<span class="mi">7</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>	      		<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">semester</span><span class="p">,</span> 		<span class="mi">9</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>	      		<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nilai</span><span class="p">,</span> 			<span class="mi">4</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>				<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">bobot</span><span class="p">,</span> 			<span class="mi">8</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>				<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">nxk</span><span class="p">,</span> 				<span class="mi">9</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>      		<span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>  	<span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>      <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;IPK  &quot;</span> <span class="o">.</span> <span class="nb">number_format</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">ipk</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">37</span><span class="p">,</span>  <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">sks_total</span> <span class="p">,</span>    <span class="mi">17</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span>
-</span><span class='line'>          <span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nxk</span>      <span class="p">,</span> <span class="mi">35</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>  	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;IPK  &quot;</span> <span class="o">.</span> <span class="nb">number_format</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">ipk</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>	<span class="mi">37</span><span class="p">,</span>	<span class="s1">&#39; &#39;</span><span class="p">,</span>	<span class="nx">STR_PAD_LEFT</span><span class="p">)</span> <span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">sks_total</span> <span class="p">,</span>	<span class="mi">17</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'>			<span class="nb">str_pad</span><span class="p">(</span><span class="nv">$header</span><span class="o">-&gt;</span><span class="na">nxk</span> 	   <span class="p">,</span>	<span class="mi">35</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;Dicetak oleh : Hans Solo&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;Dicetak Tgl : &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;d-m-Y&#39;</span><span class="p">),</span> <span class="mi">60</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
-</span><span class='line'>  <span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nv">$line</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;Dicetak oleh : Hans Solo&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">.</span> <span class="nb">str_pad</span><span class="p">(</span><span class="s2">&quot;Dicetak Tgl : &quot;</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;d-m-Y&#39;</span><span class="p">),</span> <span class="mi">60</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nx">STR_PAD_LEFT</span><span class="p">)</span><span class="o">.</span><span class="nv">$_lf</span><span class="o">.</span><span class="nv">$_lf</span><span class="p">;</span>
+</span><span class='line'>	<span class="nv">$hdr</span> <span class="o">.=</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">// Force download</span>
-</span><span class='line'>      <span class="nx">header</span><span class="p">(</span><span class="s1">&#39;Content-disposition: attachment; filename=laporan_ipk.txt&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">header</span><span class="p">(</span><span class="s1">&#39;Content-type: text/plain&#39;</span><span class="p">);</span>
+</span><span class='line'>	<span class="c1">// Force download</span>
+</span><span class='line'>  	<span class="nx">header</span><span class="p">(</span><span class="s1">&#39;Content-disposition: attachment; filename=laporan_ipk.txt&#39;</span><span class="p">);</span>
+</span><span class='line'>	<span class="nx">header</span><span class="p">(</span><span class="s1">&#39;Content-type: text/plain&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="k">echo</span> <span class="nv">$hdr</span><span class="p">;</span>
+</span><span class='line'>	<span class="k">echo</span> <span class="nv">$hdr</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// Jalankan fungsi</span>
 </span><span class='line'><span class="nx">createFile</span><span class="p">();</span>
 </span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Untuk memformat posisi dari isi laporan gunakan <a href="http://www.php.net/str_pad">str_pad</a>, proses untuk mengetahui posisi yang tepat memang harus melalui trial dan error. Kemudian untuk mengetahui kapan <mark>posisi printer harus meng-eject atau format font apa bisa diatur menggunakan escape code</mark>. Tergantung merk printer yang digunakan maka escape code-nya berbeda. Jika menggunakan <a href="http://www.lprng.com/DISTRIB/RESOURCES/PPD/epson.htm">printer Epson</a> atau <a href="http://www.devenezia.com/docs/HP/index.html?2-esc-code">printer HP</a>. Source code di atas menggunakan Epson.</p>
 
 <p>Hasilnya</p>
 
-<figure class='code'><figcaption><span> (laporan_ipk.js)</span> <a href='http://sugeng.github.io/downloads/code/laporan_ipk.js'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (laporan_ipk.js)</span> <a href='/downloads/code/laporan_ipk.js'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -363,7 +363,7 @@ copy file_yang_akan_dicetak LPT1
 </span><span class='line'><span class="nx">Dicetak</span> <span class="nx">oleh</span> <span class="o">:</span> <span class="nx">Hans</span> <span class="nx">Solo</span>                                    <span class="nx">Dicetak</span> <span class="nx">Tgl</span> <span class="o">:</span> <span class="mi">27</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">2013</span>
 </span><span class='line'>
 </span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Setelah file text didownload, kemudian bisa menggunakan perintah dos (Command Prompt) lalu pada direktori tempat file berada <code>copy laporan_ipk.txt &gt; LPT1</code>. Maka proses print akan segera di jalankan.</p>
 
@@ -397,88 +397,6 @@ copy file_yang_akan_dicetak LPT1
 <li><a href="http://www.lprng.com/DISTRIB/RESOURCES/PPD/epson.htm">Escape Code Epson</a></li>
 <li><a href="http://www.devenezia.com/docs/HP/index.html?2-esc-code">Escape Code HP</a></li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fix Octopress Repository Setelah Git Clone]]></title>
-    <link href="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/"/>
-    <updated>2013-11-25T08:57:11+07:00</updated>
-    <id>http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone</id>
-    <content type="html"><![CDATA[<p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
-<div class="CodeRay">
-  <div class="code"><pre><span class="constant">To</span> <span class="key">https</span>:<span class="regexp"><span class="delimiter">/</span><span class="delimiter">/</span></span>github.com/username/username.github.io
- ! [rejected]        master -&gt; master (non-fast-forward)
- <span class="key">error</span>: failed to push some refs to <span class="string"><span class="delimiter">'</span><span class="content">https://github.com/username/username.github.io</span><span class="delimiter">'</span></span>
- <span class="key">hint</span>: <span class="constant">Updates</span> were rejected because the tip of your current branch is behind
- <span class="key">hint</span>: its remote counterpart. Merge the remote changes (e.g. <span class="string"><span class="delimiter">'</span><span class="content">git pull</span><span class="delimiter">'</span></span>)
- <span class="key">hint</span>: before pushing again.
- hint: <span class="constant">See</span> the <span class="string"><span class="delimiter">'</span><span class="content">Note about fast-forwards</span><span class="delimiter">'</span></span> <span class="keyword">in</span> <span class="string"><span class="delimiter">'</span><span class="content">git push --help</span><span class="delimiter">'</span></span> <span class="keyword">for</span> details.
-
-<span class="comment">## Github Pages deploy complete</span>
-cd -
-</pre></div>
-</div>
-
-<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
-<div class="CodeRay">
-  <div class="code"><pre>git <span class="keyword">clone</span> https:<span class="comment">//github.com/username/username.github.io.git</span>
-git checkout source
-<span class="predefined">mkdir</span> _deploy
-cd _deploy
-git init
-git remote add -t master -f origin https:<span class="comment">//github.com/username/username.github.io.git</span>
-</pre></div>
-</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Blogging Menggunakan Octopress &amp; Heroku]]></title>
-    <link href="http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku/"/>
-    <updated>2013-11-22T09:49:24+07:00</updated>
-    <id>http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku</id>
-    <content type="html"><![CDATA[<p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
-
-<h3 id="toc_17">Plugin Wordpress terlalu banyak</h3>
-
-<p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
-
-<h3 id="toc_18">Cepat dan Efisien</h3>
-
-<p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
-
-<h3 id="toc_19">Hosting di Github Pages</h3>
-
-<p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
-
-<h3 id="toc_20">Mudah digunakan</h3>
-
-<p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
-<div class="CodeRay">
-  <div class="code"><pre>rake new_post['Judul Posting']
-rake generate
-rake deploy
-</pre></div>
-</div>
-
-<h3 id="toc_21">Markdown</h3>
-
-<p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
-
-<h3 id="toc_22">Tidak menggunakan database/Static pages</h3>
-
-<p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark>.</p>
-
-<h3 id="toc_23">Security yang lebih baik</h3>
-
-<p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
-
-<h3 id="toc_24">Tersedia Plugin</h3>
-
-<p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
-
-<p>Untuk sementara mungkin hal diatas yang bisa saya pikirkan. Dan sampai sekarang saya cukup puas menggunakan octopress.</p>
 ]]></content>
   </entry>
   
