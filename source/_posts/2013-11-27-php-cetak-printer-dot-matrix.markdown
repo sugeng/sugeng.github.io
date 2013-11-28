@@ -26,7 +26,7 @@ Dengan asumsi printer diinstall pada port LPT1.
 
 Selanjutnya saya buat program PHP untuk menggenerate laporan dalam format text yang dapat didownload ke komputer klien. Berikut snippet source PHP-nya
 
-{% include_code laporan.ipk.php %}
+{% include_code [ lang:php ] laporan.ipk.php  %}
 
 Untuk memformat posisi dari isi laporan gunakan [str_pad](http://www.php.net/str_pad), proses untuk mengetahui posisi yang tepat memang harus melalui trial dan error. Kemudian untuk mengetahui kapan ==posisi printer harus meng-eject atau format font apa bisa diatur menggunakan escape code==. Tergantung merk printer yang digunakan maka escape code-nya berbeda. Jika menggunakan [printer Epson](http://www.lprng.com/DISTRIB/RESOURCES/PPD/epson.htm) atau [printer HP](http://www.devenezia.com/docs/HP/index.html?2-esc-code). Source code di atas menggunakan Epson.
 

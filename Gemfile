@@ -4,7 +4,7 @@ group :development do
   gem 'rake', '~> 0.9.6'
   gem 'jekyll', '~> 0.12.0'
   gem 'rdiscount', '~> 2.0.7'
-  gem 'pygments.rb', '~> 0.3.4'
+  gem 'pygments.rb', '~> 0.3.7'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'
   gem 'compass', '~> 0.12.2'
@@ -19,5 +19,5 @@ end
 
 gem 'sinatra', '~> 1.4.2'
 gem 'kramdown', '~> 0.13.8'
-gem 'coderay', '~> 1.0.9'
+gem 'coderay', '~> 1.1.0'
 gem 'redcarpet', '~> 3.0.0'
