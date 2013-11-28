@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PHP | Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/categories/php/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2013-11-27T15:43:19+07:00</updated>
+  <updated>2013-11-28T10:07:37+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -39,7 +39,7 @@ copy file_yang_akan_dicetak LPT1
 
 <p>Selanjutnya saya buat program PHP untuk menggenerate laporan dalam format text yang dapat didownload ke komputer klien. Berikut snippet source PHP-nya</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (laporan.ipk.php)</span> <a href='/downloads/code/laporan.ipk.php'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[  ] (laporan.ipk.php)</span> <a href='/downloads/code/laporan.ipk.php'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
