@@ -15,7 +15,7 @@ Sekarang menyimpan snippet bisa lebih mudah menggunakan fasilitas gist dari gith
 Karena sehari-hari untuk *coding* saya menggunakan Sublime Text, saya akhirnya menginstall plugin Gist di sublime text untuk memudahkan mengambil, meng-update juga meng-create snippet baru.
 
 ### Buat account github
-Silakan registrasi account github. Service github tentunya gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).
+Silakan registrasi account github. Service github tentunya <!-- more --> gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).
 
 ### Buat API Github
 Setelah membuat account github dan login buat token di [https://github.com/settings/applications](https://github.com/settings/applications) pada bagian Personal Access Token. Tinggal masukkan deskripsi token lalu klik ==Create Token==. 
