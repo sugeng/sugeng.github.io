@@ -4,7 +4,7 @@
   <title><![CDATA[Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2014-04-30T12:30:54+07:00</updated>
+  <updated>2014-05-02T13:44:28+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -26,7 +26,7 @@
 
 <h3 id="toc_34">Buat account github</h3>
 
-<p>Silakan registrasi account github. Service github tentunya gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).</p>
+<p>Silakan registrasi account github. Service github tentunya <!-- more --> gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).</p>
 
 <h3 id="toc_35">Buat API Github</h3>
 
@@ -98,6 +98,8 @@ copy file_yang_akan_dicetak LPT1
 <p>Dengan asumsi printer diinstall pada port LPT1.</p>
 
 <p>Selanjutnya saya buat program PHP untuk menggenerate laporan dalam format text yang dapat didownload ke komputer klien. Berikut snippet source PHP-nya</p>
+
+<!-- more -->
 
 <figure class='code'><figcaption><span>[  ] (laporan.ipk.php)</span> <a href='http://sugeng.github.io/downloads/code/laporan.ipk.php'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

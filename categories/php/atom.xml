@@ -4,7 +4,7 @@
   <title><![CDATA[Category: PHP | Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/categories/php/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2014-04-30T12:30:54+07:00</updated>
+  <updated>2014-05-02T13:44:28+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -38,6 +38,8 @@ copy file_yang_akan_dicetak LPT1
 <p>Dengan asumsi printer diinstall pada port LPT1.</p>
 
 <p>Selanjutnya saya buat program PHP untuk menggenerate laporan dalam format text yang dapat didownload ke komputer klien. Berikut snippet source PHP-nya</p>
+
+<!-- more -->
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[  ] (laporan.ipk.php)</span> <a href='/downloads/code/laporan.ipk.php'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
