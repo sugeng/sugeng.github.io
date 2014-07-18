@@ -5,14 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Fix Octopress Repository Setelah Git Clone - Catatan Programmer Idiot</title>
+  <title>Laravel Series: Instalasi Laravel - Catatan Programmer Idiot</title>
   <meta name="author" content="Sugeng. S">
 
  
- <meta name="description" content="Log macam-macam snippet dan experimen" />
+ <meta name="description" content="Laravel Series, part 1, instalasi Laravel" />
 
  
- <meta name="keywords" content="sugeng, log, octopress, indonesia, programming" />
+ <meta name="keywords" content="Laravel, PHP" />
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone">
+  <link rel="canonical" href="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Catatan Programmer Idiot" type="application/atom+xml">
@@ -83,7 +83,7 @@
   
   <header>
     
-      <h1 class="entry-title">Fix Octopress Repository Setelah Git Clone</h1>
+      <h1 class="entry-title">Laravel Series: Instalasi Laravel</h1>
     
     
       <p class="meta">
@@ -99,38 +99,96 @@
   
 
 
-<time datetime="2013-11-25T08:57:11+07:00" pubdate data-updated="true">Nov 25<span>th</span>, 2013</time>
+<time datetime="2014-07-18T21:36:20+07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Setelah saya berhasil menginstall octopress pada account github saya melalui notebook, saya ingin mengupdate post-post melalui PC di kantor saya namun setelah melakukan <code>git clone</code> dari repository di github ternyata saya tidak bisa melakukan push <code>rake deploy</code></p>
-<div class="CodeRay">
-  <div class="code"><pre><span class="constant">To</span> <span class="key">https</span>:<span class="regexp"><span class="delimiter">/</span><span class="delimiter">/</span></span>github.com/username/username.github.io
- ! [rejected]        master -&gt; master (non-fast-forward)
- <span class="key">error</span>: failed to push some refs to <span class="string"><span class="delimiter">'</span><span class="content">https://github.com/username/username.github.io</span><span class="delimiter">'</span></span>
- <span class="key">hint</span>: <span class="constant">Updates</span> were rejected because the tip of your current branch is behind
- <span class="key">hint</span>: its remote counterpart. Merge the remote changes (e.g. <span class="string"><span class="delimiter">'</span><span class="content">git pull</span><span class="delimiter">'</span></span>)
- <span class="key">hint</span>: before pushing again.
- hint: <span class="constant">See</span> the <span class="string"><span class="delimiter">'</span><span class="content">Note about fast-forwards</span><span class="delimiter">'</span></span> <span class="keyword">in</span> <span class="string"><span class="delimiter">'</span><span class="content">git push --help</span><span class="delimiter">'</span></span> <span class="keyword">for</span> details.
+<div class="entry-content"><p>System Requirments:<br>
+- Composer<br>
+- PHP &gt; 5.3<br>
+- MCrypt PHP extension.</p>
 
-<span class="comment">## Github Pages deploy complete</span>
-cd -
+<h3 id="toc_45">Menggunakan LAMP/MAMP</h3>
+
+<h4 id="toc_46">Windows</h4>
+
+<h6 id="toc_47">Web Server</h6>
+
+<p>Jika Anda menggunakan Windows OS, Anda dapat menggunakan bundle webserver.<br>
+- WAMP (<a href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a>)<br>
+- XAMPP (<a href="http://www.apachefriends.org/en/xampp.html">http://www.apachefriends.org/en/xampp.html</a>)</p>
+
+<h6 id="toc_48">Instalasi Composer</h6>
+
+<p>Untuk menggunakan composer menggunakan command line di windows, kita harus terlebih dahulu menambahkan path executable php di system windows. </p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. Buka Controll Panel kemudian pilih "Advanced system Settings".
+</span><span class='line'>2. Dari tab Advanced Tab, klik pada tombol Environment Variables pada bagian bawah.
+</span><span class='line'>3. Pada bagian System Variables (kotak bawah), scroll sampai menemukan variable path.
+</span><span class='line'>4. Edit, kemudaian tambahkan ;C:\wamp\bin\php\php5.3.8 (Sesuaikan dengan path instalasi WAMP atau XAMPP anda)
+</span><span class='line'>5. Save, kemudian buka command line anda dan ketikkan php -v, jika muncul versi php yang digunakan maka konfigurasi telah selesai.
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Selanjutnya anda dapat melakukan installasi composer dari command line dengan perintah:</p>
+<div class="CodeRay">
+  <div class="code"><pre>php -r &quot;eval('?&gt;'.file_get_contents('https://getcomposer.org/installer'));
 </pre></div>
 </div>
 
-<p>Cara memperbaikinya setelah saya baca di <a href="http://http://weishi.github.io/blog/2013/07/24/setup-an-existing-octopress-repository-after-git-clone/">sini</a> akhirnya saya bisa mengupdate blog post di github.</p>
+<p>PHP akan mengunduh <em>composer.phar</em> pada folder project anda. Anda dapat mencoba composer dengan perintah:</p>
 <div class="CodeRay">
-  <div class="code"><pre>git <span class="keyword">clone</span> https:<span class="comment">//github.com/username/username.github.io.git</span>
-git checkout source
-<span class="predefined">mkdir</span> _deploy
-cd _deploy
-git init
-git remote add -t master -f origin https:<span class="comment">//github.com/username/username.github.io.git</span>
+  <div class="code"><pre>php composer.phar project-pertama
 </pre></div>
 </div>
+
+<p>Jika Anda tidak ingin setiap kalo membuat project dengan mendownload composer, Anda dapat menginstall composer secara global. Lebih jauh bisa diikuti langkah-langkahnya pada <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">https://getcomposer.org/doc/00-intro.md#installation-windows</a>.</p>
+
+<h4 id="toc_49">Linux</h4>
+
+<p>Untuk pengguna linux pastikan menginstall paket web server (LAMP). Anda dapat menginstall paket-paket tersebut menggunakan <code>apt</code> untuk debian &amp; ubuntu atau <code>yum</code> untuk centos &amp; red hat.</p>
+<div class="CodeRay">
+  <div class="code"><pre>sudo apt-get install apache2 php5 php5-mcript mysql-server
+</pre></div>
+</div>
+
+<p>Kemudian lakukan instalasi composer seperti langkah pada instalasi di windows atau ikuti langkahnya di <a href="https://getcomposer.org/doc/00-intro.md#installation-nix">https://getcomposer.org/doc/00-intro.md#installation-nix</a>.</p>
+
+<h4 id="toc_50">Mac</h4>
+
+<p>Instalasi web server dapat dilakukan dengan menggunakan <code>MAMP stack</code> (<a href="http://www.mamp.info/en/mamp/index.html">http://www.mamp.info/en/mamp/index.html</a>) atau menggunakan homebrew</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
+</span><span class='line'>brew tap josegonzalez/homebrew-php
+</span><span class='line'>brew tap homebrew/versions
+</span><span class='line'>brew install php55-intl
+</span><span class='line'>brew install josegonzalez/php/composer</span></code></pre></td></tr></table></div></figure>
+
+<p>Diambil dari <a href="https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-">https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-</a></p>
+
+<h3 id="toc_51">Instalasi Laravel</h3>
+
+<p>Setelah semua requirment berhasil diinstal selanjutkan melakukan instalasi Laravel 4. Pada document root web server Anda (win: \xampp\www atau \wamp\www, unix: \var\www) gunakan perintah composer untuk melakukan proses instalasi.</p>
+<div class="CodeRay">
+  <div class="code"><pre>composer create-project laravel/laravel &lt;nama-project&gt;
+</pre></div>
+</div>
+
+<p>Perintah diatas akan melakukan proses installasi dan konfigurasi pada folder <nama-project>. Proses installasi akan membuat folder sesuai nama-project kemudian mengunduh package-package yang merupakan dependency framework laravel. Lama proses unduh tergantung dari kecepatan internet Anda.</p>
+
+<p>Next (Laravel Series: Instalasi Laravel (2))</p>
 </div>
 
 
@@ -153,12 +211,12 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
   
 
 
-<time datetime="2013-11-25T08:57:11+07:00" pubdate data-updated="true">Nov 25<span>th</span>, 2013</time>
+<time datetime="2014-07-18T21:36:20+07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/categories/github/'>Github</a>, <a class='category' href='/categories/octopress/'>Octopress</a>
+    <a class='category' href='/categories/laravel/'>Laravel</a>
   
 </span>
 
@@ -167,7 +225,7 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel/" data-via="sugeng_doyle" data-counturl="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel/" >Tweet</a>
   
   
   
@@ -176,10 +234,8 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2013/11/22/blogging-menggunakan-octopress-and-heroku/" title="Previous Post: Blogging Menggunakan Octopress &amp; Heroku">&laquo; Blogging Menggunakan Octopress &amp; Heroku</a>
+        <a class="basic-alignment left" href="/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/" title="Previous Post: Kelola Snippet menggunakan Gist &amp; Sublime Text">&laquo; Kelola Snippet menggunakan Gist &amp; Sublime Text</a>
       
-      
-        <a class="basic-alignment right" href="/2013/11/27/php-cetak-printer-dot-matrix/" title="Next Post: PHP Cetak Printer DOT MATRIX (Bagian 1)">PHP Cetak Printer DOT MATRIX (Bagian 1) &raquo;</a>
       
     </p>
   </footer>
@@ -288,8 +344,8 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/';
-        var disqus_url = 'http://sugeng.github.io/2013/11/25/fix-octopress-repository-setelah-git-clone/';
+        var disqus_identifier = 'http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel/';
+        var disqus_url = 'http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel/';
         var disqus_script = 'embed.js';
       
     (function () {

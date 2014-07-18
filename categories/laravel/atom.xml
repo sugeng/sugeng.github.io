@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Laravel | Catatan Programmer Idiot]]></title>
+  <link href="http://sugeng.github.io/categories/laravel/atom.xml" rel="self"/>
+  <link href="http://sugeng.github.io/"/>
+  <updated>2014-07-18T21:40:32+07:00</updated>
+  <id>http://sugeng.github.io/</id>
+  <author>
+    <name><![CDATA[Sugeng. S]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Laravel Series: Instalasi Laravel]]></title>
+    <link href="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel/"/>
+    <updated>2014-07-18T21:36:20+07:00</updated>
+    <id>http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel</id>
+    <content type="html"><![CDATA[<p>System Requirments:<br>
+- Composer<br>
+- PHP &gt; 5.3<br>
+- MCrypt PHP extension.</p>
+
+<h3 id="toc_25">Menggunakan LAMP/MAMP</h3>
+
+<h4 id="toc_26">Windows</h4>
+
+<h6 id="toc_27">Web Server</h6>
+
+<p>Jika Anda menggunakan Windows OS, Anda dapat menggunakan bundle webserver.<br>
+- WAMP (<a href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a>)<br>
+- XAMPP (<a href="http://www.apachefriends.org/en/xampp.html">http://www.apachefriends.org/en/xampp.html</a>)</p>
+
+<h6 id="toc_28">Instalasi Composer</h6>
+
+<p>Untuk menggunakan composer menggunakan command line di windows, kita harus terlebih dahulu menambahkan path executable php di system windows. </p>
+<div class="CodeRay">
+  <div class="code"><pre>1. Buka Controll Panel kemudian pilih &quot;Advanced system Settings&quot;.
+2. Dari tab Advanced Tab, klik pada tombol Environment Variables pada bagian bawah.
+3. Pada bagian System Variables (kotak bawah), scroll sampai menemukan variable path.
+4. Edit, kemudaian tambahkan ;C:\wamp\bin\php\php5.3.8 (Sesuaikan dengan path instalasi WAMP atau XAMPP anda)
+5. Save, kemudian buka command line anda dan ketikkan php -v, jika muncul versi php yang digunakan maka konfigurasi telah selesai.
+
+</pre></div>
+</div>
+
+<p>Selanjutnya anda dapat melakukan installasi composer dari command line dengan perintah:</p>
+<div class="CodeRay">
+  <div class="code"><pre>php -r &quot;eval('?&gt;'.file_get_contents('https://getcomposer.org/installer'));
+</pre></div>
+</div>
+
+<p>PHP akan mengunduh <em>composer.phar</em> pada folder project anda. Anda dapat mencoba composer dengan perintah:</p>
+<div class="CodeRay">
+  <div class="code"><pre>php composer.phar project-pertama
+</pre></div>
+</div>
+
+<p>Jika Anda tidak ingin setiap kalo membuat project dengan mendownload composer, Anda dapat menginstall composer secara global. Lebih jauh bisa diikuti langkah-langkahnya pada <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">https://getcomposer.org/doc/00-intro.md#installation-windows</a>.</p>
+
+<h4 id="toc_29">Linux</h4>
+
+<p>Untuk pengguna linux pastikan menginstall paket web server (LAMP). Anda dapat menginstall paket-paket tersebut menggunakan <code>apt</code> untuk debian &amp; ubuntu atau <code>yum</code> untuk centos &amp; red hat.</p>
+<div class="CodeRay">
+  <div class="code"><pre>sudo apt-get install apache2 php5 php5-mcript mysql-server
+</pre></div>
+</div>
+
+<p>Kemudian lakukan instalasi composer seperti langkah pada instalasi di windows atau ikuti langkahnya di <a href="https://getcomposer.org/doc/00-intro.md#installation-nix">https://getcomposer.org/doc/00-intro.md#installation-nix</a>.</p>
+
+<h4 id="toc_30">Mac</h4>
+
+<p>Instalasi web server dapat dilakukan dengan menggunakan <code>MAMP stack</code> (<a href="http://www.mamp.info/en/mamp/index.html">http://www.mamp.info/en/mamp/index.html</a>) atau menggunakan homebrew</p>
+<div class="CodeRay">
+  <div class="code"><pre>brew update
+brew tap josegonzalez/homebrew-php
+brew tap homebrew/versions
+brew install php55-intl
+brew install josegonzalez/php/composer
+</pre></div>
+</div>
+
+<p>Diambil dari <a href="https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-">https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-</a></p>
+
+<h3 id="toc_31">Instalasi Laravel</h3>
+
+<p>Setelah semua requirment berhasil diinstal selanjutkan melakukan instalasi Laravel 4. Pada document root web server Anda (win: \xampp\www atau \wamp\www, unix: \var\www) gunakan perintah composer untuk melakukan proses instalasi.</p>
+<div class="CodeRay">
+  <div class="code"><pre>composer create-project laravel/laravel &lt;nama-project&gt;
+</pre></div>
+</div>
+
+<p>Perintah diatas akan melakukan proses installasi dan konfigurasi pada folder <nama-project>. Proses installasi akan membuat folder sesuai nama-project kemudian mengunduh package-package yang merupakan dependency framework laravel. Lama proses unduh tergantung dari kecepatan internet Anda.</p>
+
+<p>Next (Laravel Series: Instalasi Laravel (2))</p>
+]]></content>
+  </entry>
+  
+</feed>

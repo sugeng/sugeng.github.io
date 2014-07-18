@@ -86,6 +86,124 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/2014/07/18/laravel-series-instalasi-laravel/">Laravel Series: Instalasi Laravel</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-18T21:36:20+07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>System Requirments:<br>
+- Composer<br>
+- PHP &gt; 5.3<br>
+- MCrypt PHP extension.</p>
+
+<h3 id="toc_45">Menggunakan LAMP/MAMP</h3>
+
+<h4 id="toc_46">Windows</h4>
+
+<h6 id="toc_47">Web Server</h6>
+
+<p>Jika Anda menggunakan Windows OS, Anda dapat menggunakan bundle webserver.<br>
+- WAMP (<a href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a>)<br>
+- XAMPP (<a href="http://www.apachefriends.org/en/xampp.html">http://www.apachefriends.org/en/xampp.html</a>)</p>
+
+<h6 id="toc_48">Instalasi Composer</h6>
+
+<p>Untuk menggunakan composer menggunakan command line di windows, kita harus terlebih dahulu menambahkan path executable php di system windows. </p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. Buka Controll Panel kemudian pilih "Advanced system Settings".
+</span><span class='line'>2. Dari tab Advanced Tab, klik pada tombol Environment Variables pada bagian bawah.
+</span><span class='line'>3. Pada bagian System Variables (kotak bawah), scroll sampai menemukan variable path.
+</span><span class='line'>4. Edit, kemudaian tambahkan ;C:\wamp\bin\php\php5.3.8 (Sesuaikan dengan path instalasi WAMP atau XAMPP anda)
+</span><span class='line'>5. Save, kemudian buka command line anda dan ketikkan php -v, jika muncul versi php yang digunakan maka konfigurasi telah selesai.
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Selanjutnya anda dapat melakukan installasi composer dari command line dengan perintah:</p>
+<div class="CodeRay">
+  <div class="code"><pre>php -r &quot;eval('?&gt;'.file_get_contents('https://getcomposer.org/installer'));
+</pre></div>
+</div>
+
+<p>PHP akan mengunduh <em>composer.phar</em> pada folder project anda. Anda dapat mencoba composer dengan perintah:</p>
+<div class="CodeRay">
+  <div class="code"><pre>php composer.phar project-pertama
+</pre></div>
+</div>
+
+<p>Jika Anda tidak ingin setiap kalo membuat project dengan mendownload composer, Anda dapat menginstall composer secara global. Lebih jauh bisa diikuti langkah-langkahnya pada <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">https://getcomposer.org/doc/00-intro.md#installation-windows</a>.</p>
+
+<h4 id="toc_49">Linux</h4>
+
+<p>Untuk pengguna linux pastikan menginstall paket web server (LAMP). Anda dapat menginstall paket-paket tersebut menggunakan <code>apt</code> untuk debian &amp; ubuntu atau <code>yum</code> untuk centos &amp; red hat.</p>
+<div class="CodeRay">
+  <div class="code"><pre>sudo apt-get install apache2 php5 php5-mcript mysql-server
+</pre></div>
+</div>
+
+<p>Kemudian lakukan instalasi composer seperti langkah pada instalasi di windows atau ikuti langkahnya di <a href="https://getcomposer.org/doc/00-intro.md#installation-nix">https://getcomposer.org/doc/00-intro.md#installation-nix</a>.</p>
+
+<h4 id="toc_50">Mac</h4>
+
+<p>Instalasi web server dapat dilakukan dengan menggunakan <code>MAMP stack</code> (<a href="http://www.mamp.info/en/mamp/index.html">http://www.mamp.info/en/mamp/index.html</a>) atau menggunakan homebrew</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
+</span><span class='line'>brew tap josegonzalez/homebrew-php
+</span><span class='line'>brew tap homebrew/versions
+</span><span class='line'>brew install php55-intl
+</span><span class='line'>brew install josegonzalez/php/composer</span></code></pre></td></tr></table></div></figure>
+
+<p>Diambil dari <a href="https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-">https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-</a></p>
+
+<h3 id="toc_51">Instalasi Laravel</h3>
+
+<p>Setelah semua requirment berhasil diinstal selanjutkan melakukan instalasi Laravel 4. Pada document root web server Anda (win: \xampp\www atau \wamp\www, unix: \var\www) gunakan perintah composer untuk melakukan proses instalasi.</p>
+<div class="CodeRay">
+  <div class="code"><pre>composer create-project laravel/laravel &lt;nama-project&gt;
+</pre></div>
+</div>
+
+<p>Perintah diatas akan melakukan proses installasi dan konfigurasi pada folder <nama-project>. Proses installasi akan membuat folder sesuai nama-project kemudian mengunduh package-package yang merupakan dependency framework laravel. Lama proses unduh tergantung dari kecepatan internet Anda.</p>
+
+<p>Next (Laravel Series: Instalasi Laravel (2))</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/">Kelola Snippet Menggunakan Gist &amp; Sublime Text</a></h1>
     
     
@@ -115,7 +233,7 @@
 
 <p>Karena sehari-hari untuk <em>coding</em> saya menggunakan Sublime Text, saya akhirnya menginstall plugin Gist di sublime text untuk memudahkan mengambil, meng-update juga meng-create snippet baru.</p>
 
-<h3 id="toc_34">Buat account github</h3>
+<h3 id="toc_41">Buat account github</h3>
 
 <p>Silakan registrasi account github. Service github tentunya </div>
   
@@ -158,7 +276,7 @@
 
   <div class="entry-content"><p>Trik ini saya gunakan ketika saya membuat project program untuk sistem perguruan tinggi. Karena keperluan mencetak laporan dan daftar hadir yang masih dicetak menggunakan printer dot matrix.</p>
 
-<h3 id="toc_33">Menggunakan RAW text</h3>
+<h3 id="toc_40">Menggunakan RAW text</h3>
 
 <p>Cara ini saya dapatkan karena pernah menggunakan program EPSBED versi DOS dari DIKTI, pada dasarnya program tersebut (EPSBED) ketika melakukan proses cetak akan menciptakan file text sementara yang kemudian dicetak.</p>
 
@@ -278,19 +396,19 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
 
   <div class="entry-content"><p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
-<h3 id="toc_25">Plugin Wordpress terlalu banyak</h3>
+<h3 id="toc_32">Plugin Wordpress terlalu banyak</h3>
 
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
 
-<h3 id="toc_26">Cepat dan Efisien</h3>
+<h3 id="toc_33">Cepat dan Efisien</h3>
 
 <p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
 
-<h3 id="toc_27">Hosting di Github Pages</h3>
+<h3 id="toc_34">Hosting di Github Pages</h3>
 
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
-<h3 id="toc_28">Mudah digunakan</h3>
+<h3 id="toc_35">Mudah digunakan</h3>
 
 <p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
 <div class="CodeRay">
@@ -300,19 +418,19 @@ rake deploy
 </pre></div>
 </div>
 
-<h3 id="toc_29">Markdown</h3>
+<h3 id="toc_36">Markdown</h3>
 
 <p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
 
-<h3 id="toc_30">Tidak menggunakan database/Static pages</h3>
+<h3 id="toc_37">Tidak menggunakan database/Static pages</h3>
 
 <p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark>.</p>
 
-<h3 id="toc_31">Security yang lebih baik</h3>
+<h3 id="toc_38">Security yang lebih baik</h3>
 
 <p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
 
-<h3 id="toc_32">Tersedia Plugin</h3>
+<h3 id="toc_39">Tersedia Plugin</h3>
 
 <p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
 
@@ -337,6 +455,10 @@ rake deploy
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/07/18/laravel-series-instalasi-laravel/">Laravel Series: Instalasi Laravel</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/11/27/kelola-snippet-menggunakan-gist-and-sublime-text/">Kelola Snippet Menggunakan Gist &amp; Sublime Text</a>
       </li>
     
@@ -356,7 +478,7 @@ rake deploy
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/categories/github'>Github (2)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/php'>PHP (1)</a></li><li><a href='/categories/sublime-text'>Sublime-Text (1)</a></li><li><a href='/categories/wordpress'>Wordpress (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/categories/github'>Github (2)</a></li><li><a href='/categories/laravel'>Laravel (1)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/php'>PHP (1)</a></li><li><a href='/categories/sublime-text'>Sublime-Text (1)</a></li><li><a href='/categories/wordpress'>Wordpress (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
