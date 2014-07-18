@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Laravel | Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/categories/laravel/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2014-07-18T21:40:32+07:00</updated>
+  <updated>2014-07-18T21:45:21+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Laravel Series: Instalasi Laravel (2)]]></title>
+    <link href="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel-2/"/>
+    <updated>2014-07-18T21:43:15+07:00</updated>
+    <id>http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel-2</id>
+    <content type="html"><![CDATA[<p>Jika pada sebelumnya kita menggunakan instalasi web server sesuai dengan operating system (OS) yang kita miliki, pada tulisan ini kita akan menggunakan vagrant &amp; Virtualbox sebagai virtualisasi web server.</p>
+
+<h3 id="toc_25">Development == Production</h3>
+
+<p>Pernahkah kita membangun aplikasi pada PC/Laptop lokal yang jika kita jalankan tidak bermasalah, namun ketika kita pindahkan ke web server production ternyata aplikasi tidak dapat berjalan??</p>
+
+<blockquote>
+<p>Memaksa developer untuk menggunakan Operating System yang sama akan menghasilkan masalah.</p>
+</blockquote>
+
+<p>Saya pribadi menggunakan windows PC di kantor tapi di laptop saya menggunakan windows &amp; ubuntu (dual os) dan web server produksi saya menggunakan linux. Ketika saya membangun aplikasi di windows kemudian dijalankan di linux selalu ada saja bug yang muncul karena perbedaan <em>environment</em> dan setingan web server pada masing-masing mesin developer.</p>
+
+<p>Dengan menggunakan virtualisasi kita dapat memminimalisir terjadinya perbedaan lingkungan development dan production. Misalnya saja jika server production saya menggunakan Ubuntu, maka saya tinggal menyamakan konfigurasi &amp; tools yang digunakan pada mesin virtual saya sehingga ketika memindahkan aplikasi dari proses develop ke produksi tidak terjadi masalah.</p>
+
+<p>Jika kita berkerja dengan tim, setiap anggota dapat menyalin mesin virtual yang digunakan sebagai lingkungan develop dan diinstall pada masing-masing PC yang digunakan.</p>
+
+<h3 id="toc_26">Vagrant</h3>
+
+<p>Vagrant menyediakan kemudahan dalam konfigurasi, reproduksi dan lingkungan yang mudah dipindahkan (portabilitas) yang dibangun dengan tools yang gratis dan mudah dipelajari. Dukungan dari komunitas juga memudahkan developer fokus dalam proses pengerjaan project daripada memusingkan masalah perbedaan <em>environment</em>.</p>
+
+<p>Pada dasarnya vagrant adalah <em>wrapper</em> untuk memudahkan user menggunakan aplikasi virtual machine dengan dukungan provisioning untuk otomatisasi konfigurasi virtual machine dengan menggunakan satu perintah. Vagrant mendukung aplikasi (provider) seperti VMware, AWS, Virtualbox.</p>
+
+<h4 id="toc_27">Virtualbox</h4>
+
+<p>Salah satu provider vagrant yang populer adalah virtualbox, selain dapat digunakan baik Windows, Linux dan Mac, virtualbox adalah aplikasi open source. Untuk menggunakan vagrant download dan install terlebih dahulu virtualbox.</p>
+<div class="CodeRay">
+  <div class="code"><pre>https://www.virtualbox.org/
+</pre></div>
+</div>
+
+<p>Tutorial instalasi dan konfigurasi vagrant lebih lanjut dapat dibaca di <a href="https://docs.vagrantup.com/v2/installation/index.html">https://docs.vagrantup.com/v2/installation/index.html</a>.</p>
+
+<h3 id="toc_28">Laravel Homestead</h3>
+
+<p>Bentuk dukungan komunitas laravel lainnya adalah homestead yang merupakan official vagrant box yang telah dibangun dan dikonfigurasi untuk menjalankan PHP dan laravel. Homestead telah berisi web server (Nginx), PHP 5.5, MySQL, Postgres, Redis, Memcached dan semua tools tambahan yang dibutuhkan untuk menjalankan laravel.</p>
+
+<p>Proses Instalasi dan detail konfigurasi dapat Anda ikuti pada <a href="http://laravel.com/docs/homestead">http://laravel.com/docs/homestead</a>.</p>
+
+<h4 id="toc_29">Bahan bacaan penting</h4>
+
+<ul>
+<li><a href="http://laravel.com/docs/homestead">http://laravel.com/docs/homestead</a></li>
+<li><a href="http://code.tutsplus.com/tutorials/vagrant-what-why-and-how--net-26500">http://code.tutsplus.com/tutorials/vagrant-what-why-and-how--net-26500</a></li>
+<li><a href="https://www.andrewmunsell.com/blog/development-environments-with-vagrant-and-puppet">https://www.andrewmunsell.com/blog/development-environments-with-vagrant-and-puppet</a></li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Laravel Series: Instalasi Laravel]]></title>
@@ -23,17 +76,17 @@
 - PHP &gt; 5.3<br>
 - MCrypt PHP extension.</p>
 
-<h3 id="toc_25">Menggunakan LAMP/MAMP</h3>
+<h3 id="toc_30">Menggunakan LAMP/MAMP</h3>
 
-<h4 id="toc_26">Windows</h4>
+<h4 id="toc_31">Windows</h4>
 
-<h6 id="toc_27">Web Server</h6>
+<h6 id="toc_32">Web Server</h6>
 
 <p>Jika Anda menggunakan Windows OS, Anda dapat menggunakan bundle webserver.<br>
 - WAMP (<a href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a>)<br>
 - XAMPP (<a href="http://www.apachefriends.org/en/xampp.html">http://www.apachefriends.org/en/xampp.html</a>)</p>
 
-<h6 id="toc_28">Instalasi Composer</h6>
+<h6 id="toc_33">Instalasi Composer</h6>
 
 <p>Untuk menggunakan composer menggunakan command line di windows, kita harus terlebih dahulu menambahkan path executable php di system windows. </p>
 <div class="CodeRay">
@@ -60,7 +113,7 @@
 
 <p>Jika Anda tidak ingin setiap kalo membuat project dengan mendownload composer, Anda dapat menginstall composer secara global. Lebih jauh bisa diikuti langkah-langkahnya pada <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">https://getcomposer.org/doc/00-intro.md#installation-windows</a>.</p>
 
-<h4 id="toc_29">Linux</h4>
+<h4 id="toc_34">Linux</h4>
 
 <p>Untuk pengguna linux pastikan menginstall paket web server (LAMP). Anda dapat menginstall paket-paket tersebut menggunakan <code>apt</code> untuk debian &amp; ubuntu atau <code>yum</code> untuk centos &amp; red hat.</p>
 <div class="CodeRay">
@@ -70,7 +123,7 @@
 
 <p>Kemudian lakukan instalasi composer seperti langkah pada instalasi di windows atau ikuti langkahnya di <a href="https://getcomposer.org/doc/00-intro.md#installation-nix">https://getcomposer.org/doc/00-intro.md#installation-nix</a>.</p>
 
-<h4 id="toc_30">Mac</h4>
+<h4 id="toc_35">Mac</h4>
 
 <p>Instalasi web server dapat dilakukan dengan menggunakan <code>MAMP stack</code> (<a href="http://www.mamp.info/en/mamp/index.html">http://www.mamp.info/en/mamp/index.html</a>) atau menggunakan homebrew</p>
 <div class="CodeRay">
@@ -84,7 +137,7 @@ brew install josegonzalez/php/composer
 
 <p>Diambil dari <a href="https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-">https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-</a></p>
 
-<h3 id="toc_31">Instalasi Laravel</h3>
+<h3 id="toc_36">Instalasi Laravel</h3>
 
 <p>Setelah semua requirment berhasil diinstal selanjutkan melakukan instalasi Laravel 4. Pada document root web server Anda (win: \xampp\www atau \wamp\www, unix: \var\www) gunakan perintah composer untuk melakukan proses instalasi.</p>
 <div class="CodeRay">

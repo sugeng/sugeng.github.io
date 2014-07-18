@@ -4,7 +4,7 @@
   <title><![CDATA[Catatan Programmer Idiot]]></title>
   <link href="http://sugeng.github.io/atom.xml" rel="self"/>
   <link href="http://sugeng.github.io/"/>
-  <updated>2014-07-18T21:40:32+07:00</updated>
+  <updated>2014-07-18T21:45:21+07:00</updated>
   <id>http://sugeng.github.io/</id>
   <author>
     <name><![CDATA[Sugeng. S]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Laravel Series: Instalasi Laravel (2)]]></title>
+    <link href="http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel-2/"/>
+    <updated>2014-07-18T21:43:15+07:00</updated>
+    <id>http://sugeng.github.io/2014/07/18/laravel-series-instalasi-laravel-2</id>
+    <content type="html"><![CDATA[<p>Jika pada sebelumnya kita menggunakan instalasi web server sesuai dengan operating system (OS) yang kita miliki, pada tulisan ini kita akan menggunakan vagrant &amp; Virtualbox sebagai virtualisasi web server.</p>
+
+<h3 id="toc_57">Development == Production</h3>
+
+<p>Pernahkah kita membangun aplikasi pada PC/Laptop lokal yang jika kita jalankan tidak bermasalah, namun ketika kita pindahkan ke web server production ternyata aplikasi tidak dapat berjalan??</p>
+
+<blockquote>
+<p>Memaksa developer untuk menggunakan Operating System yang sama akan menghasilkan masalah.</p>
+</blockquote>
+
+<p>Saya pribadi menggunakan windows PC di kantor tapi di laptop saya menggunakan windows &amp; ubuntu (dual os) dan web server produksi saya menggunakan linux. Ketika saya membangun aplikasi di windows kemudian dijalankan di linux selalu ada saja bug yang muncul karena perbedaan <em>environment</em> dan setingan web server pada masing-masing mesin developer.</p>
+
+<p>Dengan menggunakan virtualisasi kita dapat memminimalisir terjadinya perbedaan lingkungan development dan production. Misalnya saja jika server production saya menggunakan Ubuntu, maka saya tinggal menyamakan konfigurasi &amp; tools yang digunakan pada mesin virtual saya sehingga ketika memindahkan aplikasi dari proses develop ke produksi tidak terjadi masalah.</p>
+
+<p>Jika kita berkerja dengan tim, setiap anggota dapat menyalin mesin virtual yang digunakan sebagai lingkungan develop dan diinstall pada masing-masing PC yang digunakan.</p>
+
+<h3 id="toc_58">Vagrant</h3>
+
+<p>Vagrant menyediakan kemudahan dalam konfigurasi, reproduksi dan lingkungan yang mudah dipindahkan (portabilitas) yang dibangun dengan tools yang gratis dan mudah dipelajari. Dukungan dari komunitas juga memudahkan developer fokus dalam proses pengerjaan project daripada memusingkan masalah perbedaan <em>environment</em>.</p>
+
+<p>Pada dasarnya vagrant adalah <em>wrapper</em> untuk memudahkan user menggunakan aplikasi virtual machine dengan dukungan provisioning untuk otomatisasi konfigurasi virtual machine dengan menggunakan satu perintah. Vagrant mendukung aplikasi (provider) seperti VMware, AWS, Virtualbox.</p>
+
+<h4 id="toc_59">Virtualbox</h4>
+
+<p>Salah satu provider vagrant yang populer adalah virtualbox, selain dapat digunakan baik Windows, Linux dan Mac, virtualbox adalah aplikasi open source. Untuk menggunakan vagrant download dan install terlebih dahulu virtualbox.</p>
+<div class="CodeRay">
+  <div class="code"><pre>https://www.virtualbox.org/
+</pre></div>
+</div>
+
+<p>Tutorial instalasi dan konfigurasi vagrant lebih lanjut dapat dibaca di <a href="https://docs.vagrantup.com/v2/installation/index.html">https://docs.vagrantup.com/v2/installation/index.html</a>.</p>
+
+<h3 id="toc_60">Laravel Homestead</h3>
+
+<p>Bentuk dukungan komunitas laravel lainnya adalah homestead yang merupakan official vagrant box yang telah dibangun dan dikonfigurasi untuk menjalankan PHP dan laravel. Homestead telah berisi web server (Nginx), PHP 5.5, MySQL, Postgres, Redis, Memcached dan semua tools tambahan yang dibutuhkan untuk menjalankan laravel.</p>
+
+<p>Proses Instalasi dan detail konfigurasi dapat Anda ikuti pada <a href="http://laravel.com/docs/homestead">http://laravel.com/docs/homestead</a>.</p>
+
+<h4 id="toc_61">Bahan bacaan penting</h4>
+
+<ul>
+<li><a href="http://laravel.com/docs/homestead">http://laravel.com/docs/homestead</a></li>
+<li><a href="http://code.tutsplus.com/tutorials/vagrant-what-why-and-how--net-26500">http://code.tutsplus.com/tutorials/vagrant-what-why-and-how&#8211;net-26500</a></li>
+<li><a href="https://www.andrewmunsell.com/blog/development-environments-with-vagrant-and-puppet">https://www.andrewmunsell.com/blog/development-environments-with-vagrant-and-puppet</a></li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Laravel Series: Instalasi Laravel]]></title>
@@ -23,17 +76,17 @@
 - PHP &gt; 5.3<br>
 - MCrypt PHP extension.</p>
 
-<h3 id="toc_45">Menggunakan LAMP/MAMP</h3>
+<h3 id="toc_50">Menggunakan LAMP/MAMP</h3>
 
-<h4 id="toc_46">Windows</h4>
+<h4 id="toc_51">Windows</h4>
 
-<h6 id="toc_47">Web Server</h6>
+<h6 id="toc_52">Web Server</h6>
 
 <p>Jika Anda menggunakan Windows OS, Anda dapat menggunakan bundle webserver.<br>
 - WAMP (<a href="http://www.wampserver.com/en/">http://www.wampserver.com/en/</a>)<br>
 - XAMPP (<a href="http://www.apachefriends.org/en/xampp.html">http://www.apachefriends.org/en/xampp.html</a>)</p>
 
-<h6 id="toc_48">Instalasi Composer</h6>
+<h6 id="toc_53">Instalasi Composer</h6>
 
 <p>Untuk menggunakan composer menggunakan command line di windows, kita harus terlebih dahulu menambahkan path executable php di system windows. </p>
 
@@ -63,7 +116,7 @@
 
 <p>Jika Anda tidak ingin setiap kalo membuat project dengan mendownload composer, Anda dapat menginstall composer secara global. Lebih jauh bisa diikuti langkah-langkahnya pada <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">https://getcomposer.org/doc/00-intro.md#installation-windows</a>.</p>
 
-<h4 id="toc_49">Linux</h4>
+<h4 id="toc_54">Linux</h4>
 
 <p>Untuk pengguna linux pastikan menginstall paket web server (LAMP). Anda dapat menginstall paket-paket tersebut menggunakan <code>apt</code> untuk debian &amp; ubuntu atau <code>yum</code> untuk centos &amp; red hat.</p>
 <div class="CodeRay">
@@ -73,7 +126,7 @@
 
 <p>Kemudian lakukan instalasi composer seperti langkah pada instalasi di windows atau ikuti langkahnya di <a href="https://getcomposer.org/doc/00-intro.md#installation-nix">https://getcomposer.org/doc/00-intro.md#installation-nix</a>.</p>
 
-<h4 id="toc_50">Mac</h4>
+<h4 id="toc_55">Mac</h4>
 
 <p>Instalasi web server dapat dilakukan dengan menggunakan <code>MAMP stack</code> (<a href="http://www.mamp.info/en/mamp/index.html">http://www.mamp.info/en/mamp/index.html</a>) atau menggunakan homebrew</p>
 
@@ -90,7 +143,7 @@
 
 <p>Diambil dari <a href="https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-">https://getcomposer.org/doc/00-intro.md#globally-on-osx-via-homebrew-</a></p>
 
-<h3 id="toc_51">Instalasi Laravel</h3>
+<h3 id="toc_56">Instalasi Laravel</h3>
 
 <p>Setelah semua requirment berhasil diinstal selanjutkan melakukan instalasi Laravel 4. Pada document root web server Anda (win: \xampp\www atau \wamp\www, unix: \var\www) gunakan perintah composer untuk melakukan proses instalasi.</p>
 <div class="CodeRay">
@@ -115,15 +168,15 @@
 
 <p>Karena sehari-hari untuk <em>coding</em> saya menggunakan Sublime Text, saya akhirnya menginstall plugin Gist di sublime text untuk memudahkan mengambil, meng-update juga meng-create snippet baru.</p>
 
-<h3 id="toc_41">Buat account github</h3>
+<h3 id="toc_46">Buat account github</h3>
 
 <p>Silakan registrasi account github. Service github tentunya <!-- more --> gratis namun kita nya bisa membuat repositori public. Jika ingin memiliki repositori yang prive kita bisa upgrage ke account yang berbayar (paling murah $7 per-bulan).</p>
 
-<h3 id="toc_42">Buat API Github</h3>
+<h3 id="toc_47">Buat API Github</h3>
 
 <p>Setelah membuat account github dan login buat token di <a href="https://github.com/settings/applications">https://github.com/settings/applications</a> pada bagian Personal Access Token. Tinggal masukkan deskripsi token lalu klik <mark>Create Token</mark>. </p>
 
-<h3 id="toc_43">Install Plugin Gist</h3>
+<h3 id="toc_48">Install Plugin Gist</h3>
 
 <p>Jika Anda juga menggunakan Sublime Text gunakan shortcut <code>ctrl+shit+p</code> untuk mengaktifkan window <em>palette</em> kemudian cari plugin <em>gist</em>. Setelah plugin selesai di install masuk ke <code>Preferences &gt; Package Settings &gt; Gists &gt; Settings - User</code>. Jika baru pertama kali menginstall plugin gist mungkin file setting ini masih kosong.</p>
 
@@ -137,7 +190,7 @@
 
 <p>Copy token yang tadi telah dibuat di gihub pada <mark>TOKEN ANDA</mark> lalu simpan.</p>
 
-<h3 id="toc_44">Menggunakan Plugin</h3>
+<h3 id="toc_49">Menggunakan Plugin</h3>
 
 <p>Untuk menggunakan plugin gist, aktifkan <em>palette</em> (<code>ctrl+shit+p</code>) lalu ketik gist, maka muncul perintah git yang bisa digunakan.</p>
 
@@ -171,7 +224,7 @@
     <id>http://sugeng.github.io/2013/11/27/php-cetak-printer-dot-matrix</id>
     <content type="html"><![CDATA[<p>Trik ini saya gunakan ketika saya membuat project program untuk sistem perguruan tinggi. Karena keperluan mencetak laporan dan daftar hadir yang masih dicetak menggunakan printer dot matrix.</p>
 
-<h3 id="toc_40">Menggunakan RAW text</h3>
+<h3 id="toc_45">Menggunakan RAW text</h3>
 
 <p>Cara ini saya dapatkan karena pernah menggunakan program EPSBED versi DOS dari DIKTI, pada dasarnya program tersebut (EPSBED) ketika melakukan proses cetak akan menciptakan file text sementara yang kemudian dicetak.</p>
 
@@ -593,19 +646,19 @@ git remote add -t master -f origin https:<span class="comment">//github.com/user
     <id>http://sugeng.github.io/2013/11/22/blogging-menggunakan-octopress-and-heroku</id>
     <content type="html"><![CDATA[<p>Setelah lama menggunakan wordpress sebagai media untuk blogging akhirnya saya memutuskan untuk bermigrasi menggunakan octopress. Alasan kenapa saya bermigrasi sebagai berikut :</p>
 
-<h3 id="toc_32">Plugin Wordpress terlalu banyak</h3>
+<h3 id="toc_37">Plugin Wordpress terlalu banyak</h3>
 
 <p>Salah satu keunggulan worpress adalah tersedianya plugin yang banyak, namun untuk mengelola plugin-plugin yang terinstall terlalu makan waktu sehingga terkadang malah tidak fokus pada tujuan nge-blog yaitu menulis.</p>
 
-<h3 id="toc_33">Cepat dan Efisien</h3>
+<h3 id="toc_38">Cepat dan Efisien</h3>
 
 <p>Octopress framework menggunakan <a href="https://github.com/mojombo/jekyll" title="Jekyll Page">Jekyll</a> untuk menggenerate halaman-halaman websitenya. Semua halaman blog adalah static page sehingga tidak membutuhkan proses yang berat pada server dan dapat didownload secepatnya ke browser client.</p>
 
-<h3 id="toc_34">Hosting di Github Pages</h3>
+<h3 id="toc_39">Hosting di Github Pages</h3>
 
 <p>Web static octopress bisa dihosting-kan di <a href="https://help.github.com/articles/what-are-github-pages">Github pages</a> yang notabene gratis. Terlebih github selalu online dan waktu respon yang cepat.</p>
 
-<h3 id="toc_35">Mudah digunakan</h3>
+<h3 id="toc_40">Mudah digunakan</h3>
 
 <p>Workflow penggunaan octopress juga sangat mudah, cukup dengan perintah command line posting blog lansung selesai.</p>
 <div class="CodeRay">
@@ -615,19 +668,19 @@ rake deploy
 </pre></div>
 </div>
 
-<h3 id="toc_36">Markdown</h3>
+<h3 id="toc_41">Markdown</h3>
 
 <p>Sebagai editor, octopress menggunakan <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Menggunakan markdown lebih simple dan cepat daripada wordpress editor. Untuk markdown editor di windows saya menggunakan <a href="http://pad.haroopress.com/user.html#download">Haroopad</a>.</p>
 
-<h3 id="toc_37">Tidak menggunakan database/Static pages</h3>
+<h3 id="toc_42">Tidak menggunakan database/Static pages</h3>
 
 <p><em>apa? tidak menggunakan database??</em> Ya, octopress tidak memerlukan database content sehingga tidak ada query yang memberatkan server. Config file disimpan di file <mark>_config</mark> kemudian halaman blog digenerate oleh <mark>jekyll</mark>.</p>
 
-<h3 id="toc_38">Security yang lebih baik</h3>
+<h3 id="toc_43">Security yang lebih baik</h3>
 
 <p>Tentunya dengan menggunakan service kepunyaan github, securitas dari blog lebih kuat.</p>
 
-<h3 id="toc_39">Tersedia Plugin</h3>
+<h3 id="toc_44">Tersedia Plugin</h3>
 
 <p>Octoress tentunya juga memiliki plugin-plugin yang dapat dipakai seperti Disqus, Twitter, Facebook, Github, dll..</p>
 
